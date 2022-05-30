@@ -1,3 +1,51 @@
 /*add Google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap');
 
+/*add background image*/
+body {
+    background-image: url(../images/hip-hop-1873203_1920.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+/*styling heading and paragraphs*/
+h1, h2, p {
+    font-family: Libre Baskerville, serif;
+    color:white;
+    text-align: left;
+}
+
+p {
+    font-family: Roboto, sans-serif;
+    color:white;
+    text-align: left;
+}
+
+li {
+    font-family: Roboto, sans-serif;
+    color:white;
+    text-align: justify;
+}
+
+
+/*styling and positioning of intro box*/
+
+#intro {
+    background-color: #0B2843;
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 2%;
+}
+
+button {
+    height: 5vh;
+    color: #0B2843;
+    margin-left: 13%;
+}
+
+ 
