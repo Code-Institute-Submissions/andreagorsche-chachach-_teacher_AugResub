@@ -28,14 +28,16 @@
             </ul>
     
     <!--initial user choice-->
-    <button id="leading">Leading Steps</button>
-    <button id="nonleading">Non-Leading Steps</button>
+    <button id="leading" onclick="initialCheck()">Leading Steps</button>
+    <button id="nonleading" onclick="initialCheck()">Non-Leading Steps</button>
     </div>
  
     <!--hidden dancefloor for men-->
-    <div class="dancefloor">
+    <div hidden id="dancefloormen">
         <h1>ChaChaCha Teacher</h1>
+        <div id="stepsmen">
         <img src="assets/images/dancingmen/stepsmen0.png">
+        </div>
         <button id="startmen">Start</button>
         <div class = music>
             <button class="playpause" class="fa-solid fa-play-pause" title="Play/Pause"></button>
@@ -45,9 +47,11 @@
         </div>
     </div>
     <!--hidden dancefloor for women-->
-    <div hidden class="dancefloor">
+    <div hidden id="dancefloorwomen">
         <h1>ChaChaCha Teacher</h1>
+        <div id="stepswomen">
         <img src="">
+        </div>
         <button id="startwomen">Start</button>
         <div class = music>
             <button class="playpause" class="fa-solid fa-play-pause" title="Play/Pause"></button>
