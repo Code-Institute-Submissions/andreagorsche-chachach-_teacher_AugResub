@@ -38,12 +38,12 @@
         <div id="stepsmen">
         <img src="assets/images/dancingmen/stepsmen0.png">
         </div>
-        <button id="startmen">Start</button>
+        <p>Practice Time: <span id="practice">0</span></p>
+      
+        <button id="startmen" onclick="startLeadingSteps()">Start</button>
         <div class = music>
-            <button class="playpause" class="fa-solid fa-play-pause" title="Play/Pause"></button>
-            <button class="muteunmute" class="fa-solid fa-volume-slash" title="Un/mute"></button>
-            <button class="volumehigh" class="fa-solid fa-volume-high" title="VolumeHigher"></button>
-            <button class="volumelow" class="fa-solid fa-volume-low" title="VolumeLower"></button>
+            <button class="playpause" class="fa-solid fa-play-pause" title="Play/Pause" onclick="playPause()"></button>
+            <button class="muteunmute" class="fa-solid fa-volume-slash" title="Un/mute" onclick="unMute()"></button>
         </div>
     </div>
     <!--hidden dancefloor for women-->
@@ -52,12 +52,10 @@
         <div id="stepswomen">
         <img src="">
         </div>
-        <button id="startwomen">Start</button>
+        <button id="startwomen" onclick="startNonLeadingSteps ()">Start</button>
         <div class = music>
             <button class="playpause" class="fa-solid fa-play-pause" title="Play/Pause"></button>
             <button class="muteunmute" class="fa-solid fa-volume-slash" title="Un/mute"></button>
-            <button class="volumehigh" class="fa-solid fa-volume-high" title="VolumeHigher"></button>
-            <button class="volumelow" class="fa-solid fa-volume-low" title="VolumeLower"></button>
         </div>
     </div>
     

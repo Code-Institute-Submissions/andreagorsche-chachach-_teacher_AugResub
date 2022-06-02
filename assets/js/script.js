@@ -2,6 +2,10 @@
 if leading was clicked men dancefloor appears, 
 if nonleading is clicked women dancefloor appers*/
 
+/*initial decision by user*/
+document.getElementById("leading").addEventListener("click", initialCheck ());
+document.getElementById("nonleading").addEventListener("click", initialCheck ());
+
 function initialCheck () {
 if(document.getElementById('button').clicked == true) {
     let intro = document.getElementById("intro");
@@ -15,21 +19,45 @@ if(document.getElementById('button').clicked == true) {
     }
 }
 
-/* click start button on dancefloor to start dance session*/
+/* Clicking start button to start training*/
 document.getElementById("startmen").addEventListener("click", startLeadingSteps ());
 document.getElementById("startwomen").addEventListener("click", startNonLeadingSteps());
 
-
+/*collective function starting 4 sub functions when "start button" is clicked*/
 function startLeadingSteps (){
     counter();
-    loadLeadingSteps();
     playMusic();
+    practiceTime();
+    loadLeadingSteps();
 }
+
+/*countdown from 3 to 1 as preparation for the user to get ready*/
 
 function counter (){
 
 } 
 
+/*automatic music play when start button pushed*/
+function playMusic(){
+    let music = [./audio/chachacha1.mp3,
+    ./audio/chachacha2.mp3,
+    ./audio/chachacha3.mp3,
+    ]
+    for(i=0; i < music.length; i++) {
+        music.play();
+    }
+}
+
+/*timer counting the time passed since start button was pushed*/
+function practiceTime(){
+        let timerElement = document.getElementById('practice');
+        let currentTime = timerElement.innerHTML;
+        currentTime++;
+        timerElement.innerHTML = currentTime;
+        , 1000);
+}
+
+/* array of pictures shown astep-by-step dancing lesson for men*/
 function loadLeadingSteps(){
     let menStepArray [./images/dancingmen/stepsmen1.png,
     ./images/dancingmen/stepsmen2.png,
@@ -44,37 +72,52 @@ for (let i=0; i < menArray.length; i++){
     }   
 }
 
-function playMusic(){
+/* Clicking start button to start training*/
+document.getElementById("playpause").addEventListener("click", playPause ());
+document.getElementById("muteunmute").addEventListener("click", unMute());
+document.getElementById("shuffle").addEventListener("click", shuffleMusic());
+
+/*music buttons*/
+function playPause(){
     let music = [./audio/chachacha1.mp3,
     ./audio/chachacha2.mp3,
     ./audio/chachacha3.mp3,
     ]
-    for(i=0; i < music.length; i++) {
+    let count = 0;
+    if (count === 0){
     music.play();
+    }
+        else {
+        music.pause();
+        }
+}
+    
+function unMute(){
+    let music = [./audio/chachacha1.mp3,
+    ./audio/chachacha2.mp3,
+    ./audio/chachacha3.mp3,
+    ]
+    let count = 0;
+    if (count === 0){
+    music.muted = false;
+    }
+    else {
+    music.muted = true;
     }
 }
 
-document.getElementByClass("playpause").addEventListener("click", pauseMusic());
-
-function pauseMusic() {
-  music.pause();
-} 
-    
-}
-
-function muteMusic(){
-    
-    
-}
-
-
-
 function shuffleMusic(){
-   
-    
+    let music = [./audio/chachacha1.mp3,
+    ./audio/chachacha2.mp3,
+    ./audio/chachacha3.mp3,
+    ]
+    while (i > 0; i < musiclength; i++) {
+    musicnum = Math.floor(Math.random() * i);
 }
+
 
 /* to be defined according to the LeadingSteps function
+
 loadNonLeadingSteps(){
     
 }
