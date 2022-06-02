@@ -34,7 +34,16 @@ function startLeadingSteps (){
 /*countdown from 3 to 1 as preparation for the user to get ready*/
 
 function counter (){
-
+    let countdown = 3;
+    let downloadTimer = setInterval(function(){
+    if(countdown <= 0){
+    clearInterval(downloadTimer);
+    document.getElementById("counter-div").innerHTML = "Finished";
+        } else {
+        document.getElementById("counter-div").innerHTML = timeleft + " seconds remaining";
+    }
+    timeleft -= 1;
+    }, 1000);
 } 
 
 /*automatic music play when start button pushed*/
