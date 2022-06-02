@@ -29,7 +29,7 @@ li {
 }
 
 
-/*styling and positioning of intro box*/
+/*styling and positioning of intro box and dancefloor*/
 
 #intro {
     background-color: #0B2843;
@@ -42,10 +42,30 @@ li {
     padding: 2%;
 }
 
+.dancefloor{
+    height: 25rem;
+    width: 25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 2%;
+}
+
+.dancefloor > img {
+    height: 25rem;
+    width: 25rem;
+}
+
 button {
     height: 5vh;
     color: #0B2843;
     margin-left: 13%;
+}
+
+.music {
+    display: block;
 }
 
  

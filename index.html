@@ -9,8 +9,10 @@
     <meta name="description" content="Learn the basic steps of ChaChaCha with the ChaChaCha Teacher">
     <meta name="keywords" content="chachacha, virtual dance class, learn basic dance steps, chachacha teacher, dance lesson online">
     
-    <!--stylesheet integration-->
+    <!--stylesheet and font awesome integration-->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
     <title>ChaChaCha Teacher</title>
 </head>
 <body>
@@ -27,7 +29,32 @@
     
     <!--initial user choice-->
     <button id="leading">Leading Steps</button>
-    <button id="leading">Non-Leading Steps</button>
+    <button id="nonleading">Non-Leading Steps</button>
+    </div>
+ 
+    <!--hidden dancefloor for men-->
+    <div class="dancefloor">
+        <h1>ChaChaCha Teacher</h1>
+        <img src="assets/images/dancingmen/stepsmen0.png">
+        <button id="startmen">Start</button>
+        <div class = music>
+            <button class="playpause" class="fa-solid fa-play-pause" title="Play/Pause"></button>
+            <button class="muteunmute" class="fa-solid fa-volume-slash" title="Un/mute"></button>
+            <button class="volumehigh" class="fa-solid fa-volume-high" title="VolumeHigher"></button>
+            <button class="volumelow" class="fa-solid fa-volume-low" title="VolumeLower"></button>
+        </div>
+    </div>
+    <!--hidden dancefloor for women-->
+    <div hidden class="dancefloor">
+        <h1>ChaChaCha Teacher</h1>
+        <img src="">
+        <button id="startwomen">Start</button>
+        <div class = music>
+            <button class="playpause" class="fa-solid fa-play-pause" title="Play/Pause"></button>
+            <button class="muteunmute" class="fa-solid fa-volume-slash" title="Un/mute"></button>
+            <button class="volumehigh" class="fa-solid fa-volume-high" title="VolumeHigher"></button>
+            <button class="volumelow" class="fa-solid fa-volume-low" title="VolumeLower"></button>
+        </div>
     </div>
     
     <!--javascript integration-->

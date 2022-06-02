@@ -1,4 +1,8 @@
-leadingSteps(){
+loadLeadingSteps (){
+}
+
+
+startLeadingSteps(){
 
 }
 
@@ -23,6 +27,6 @@ volumeMusic(){
 }
 
 shuffleMusic(){
-    
+   
     
 }
