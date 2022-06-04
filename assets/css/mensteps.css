@@ -1,0 +1,27 @@
+
+/*add background image*/
+#leading-background {
+    background-image: url(../images/backgrounds/backgroundman.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+#step-img {
+    height:25rem;
+}
+
+.musicbtn{
+  width: 3rem;
+  height: 2rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading, .practicetime {
+  background-color: #0B2843;
+  width: 25rem;
+}
+
+
