@@ -9,13 +9,12 @@
     <meta name="description" content="Learn the basic steps of ChaChaCha with the ChaChaCha Teacher">
     <meta name="keywords" content="chachacha, virtual dance class, learn basic dance steps, chachacha teacher, dance lesson online">
     
-    <!--stylesheet and font awesome integration-->
+    <!--stylesheet integration-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <title>ChaChaCha Teacher</title>
 </head>
-<body>
+<body id="start-background">
     <div id="intro">
     <!--explanatory text for user understandability--> 
         <h1>ChaChaCha Teacher</h1>
@@ -28,40 +27,8 @@
             </ul>
     
     <!--initial user choice-->
-    <button id="leading" onclick="initialCheck()">Leading Steps</button>
-    <button id="nonleading" onclick="initialCheck()">Non-Leading Steps</button>
+    <button type="button" onclick="window.location.href='leadingsteps.html'">Leading Steps</button>
+    <button type="button" onclick="window.location.href='leadingsteps.html'">Non-Leading Steps</button>
     </div>
- 
-    <!--hidden dancefloor for men-->
-    <div hidden id="dancefloormen">
-        <h1>ChaChaCha Teacher</h1>
-        <div class="counter-div"></div>
-        <div id="stepsmen">
-        <img src="assets/images/dancingmen/stepsmen0.png">
-        </div>
-        <p>Practice Time: <span id="practice">0</span></p>
-      
-        <button id="startmen" onclick="startLeadingSteps()">Start</button>
-        <div class = music>
-            <button class="playpause" class="fa-solid fa-play-pause" title="Play/Pause" onclick="playPause()"></button>
-            <button class="muteunmute" class="fa-solid fa-volume-slash" title="Un/mute" onclick="unMute()"></button>
-        </div>
-    </div>
-    <!--hidden dancefloor for women-->
-    <div hidden id="dancefloorwomen">
-        <h1>ChaChaCha Teacher</h1>
-        <div class="counter-div"></div>
-        <div id="stepswomen">
-        <img src="">
-        </div>
-        <button id="startwomen" onclick="startNonLeadingSteps ()">Start</button>
-        <div class = music>
-            <button class="playpause" class="fa-solid fa-play-pause" title="Play/Pause"></button>
-            <button class="muteunmute" class="fa-solid fa-volume-slash" title="Un/mute"></button>
-        </div>
-    </div>
-    
-    <!--javascript integration-->
-    <script src="assets/js/script.js"></script>
 </body>
 </html>

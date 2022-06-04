@@ -2,8 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap');
 
 /*add background image*/
-body {
-    background-image: url(../images/hip-hop-1873203_1920.jpg);
+#start-background {
+    height:100%;
+    background-image: url(../images/backgrounds/hip-hop-1873203_1920.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -64,8 +65,5 @@ button {
     margin-left: 13%;
 }
 
-.music {
-    display: block;
-}
 
  
