@@ -24,16 +24,21 @@
         <h1>ChaChaCha Teacher</h1>
         <h2>Leading Steps</h2>
         </div>
+        <div id="counter-div"></div>
         <div id="dancefloormen">
             <img id="step-img" src="assets/images/dancingmen/stepsmen0.png" alt="intro-step">
-            <p class="practicetime">Practice Time: <span id="practice">00:00:00</span></p>
-            <button id="startmen" onclick="loadLeadingSteps()">Start</button>
+            <p class="practicetime">Practice Time: <span id="practice">00:00</span></p>
+            <button id="startmen" onclick="startDance()">Start</button>
         </div>     
+        
         <div class = music>
             <button class="musicbtn" id="playpause" title="Play/Pause" onclick="playPause()">
                 <i class="fa-solid fa-play"></i>
             </button>
             <button class="musicbtn" id="muteunmute" title="Un/mute" onclick="unMute()">
+                <i class="fa-solid fa-volume-off"></i>
+            </button>
+            <button class="musicbtn" id="shuffle" title="Un/mute" onclick="unMute()">
                 <i class="fa-solid fa-shuffle"></i>
             </button>
         </div>
