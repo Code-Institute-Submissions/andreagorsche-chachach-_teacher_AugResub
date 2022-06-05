@@ -67,7 +67,7 @@ function playMusic(){
 }
 
 /*timer counting the time passed since start button was pushed*/
-if(getElementbyId="startmen".clicked == true){
+if(getElementbyId=("startmen").clicked == true){
 setInterval(function(){
     let timerElement = document.getElementById('practice');
     let currentTime = timerElement.innerHTML;
@@ -82,7 +82,7 @@ setInterval(function(){
 function colorButton {
     const color = document.getElementByClass('musicbtn');
     let index = 0;
-    const colors = ['red', 'green'];
+    const colors = ['red', 'grey'];
     mute.addEventListener('click', function onClick() {
       mute.style.backgroundColor = colors[index];
       btn.style.color = 'white';
