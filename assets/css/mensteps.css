@@ -26,6 +26,7 @@
 }
 
 .musicbtn, #startmen {
+  background-color: lightgrey;
   width: 3rem;
   height: 2rem;
 }
@@ -49,10 +50,6 @@
 }
 
 #counter-div{
-  height:25rem;
-  z-index: 1;
-}
-
-#steps-div{
-  z-index:0;
+  font-size: large;
+  color:red;
 }
