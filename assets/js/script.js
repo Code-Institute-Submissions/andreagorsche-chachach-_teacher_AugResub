@@ -76,23 +76,32 @@ setInterval(function(){
   }, 1000);
 }
 
-/*music buttons*/
-document.getElementById("playpause").addEventListener("click", playPause);
-document.getElementById("muteunmute").addEventListener("click", muteUnmute);
 
 
-
+/*color the buttons on click*/
+function colorButton {
+    const color = document.getElementByClass('musicbtn');
+    let index = 0;
+    const colors = ['red', 'green'];
+    mute.addEventListener('click', function onClick() {
+      mute.style.backgroundColor = colors[index];
+      btn.style.color = 'white';
+      index = index >= colors.length - 1 ? 0 : index + 1;
+    });
+    }
+    
 /*pause button*/
 function playPause(){
     let pause = document.getElementById("playpause");
     pause.addEventListener("click", function(){
-      if(AUDIO_FILES_LIST.paused){
-        AUDIO_FILES_LIST.play();
-        button.innerHTML = "Pause";
-      } else {
+        colorButton();
+        if(color === red ){
         AUDIO_FILES_LIST.pause();
-        button.innerHTML = "Play";
-      }
+        button.innerHTML = "<i class="fa-solid fa-pause"></i>";
+      } else { if (color === green){
+        AUDIO_FILES_LIST.play();
+        button.innerHTML = "<i class="fa-solid fa-pause"></i>";
+    } }
     });
 }
 
@@ -100,16 +109,21 @@ function playPause(){
 function unMute(){
     let mute = document.getElementById("muteunmute");
     mute.addEventListener("click", function(){
-        if (AUDIO_FILES_LIST.muted === false) {    
-            AUDIO_FILES_LIST.muted = true;
-            button.innerHTML = "muted";
+        colorButton();
+        if (color === red) {    
+            AUDIO_FILES_LIST.volume = 0;
         }
-        else {
-            AUDIO_FILES_LIST.muted = false;
+        else { if(color === green)
+            AUDIO_FILES_LIST.volume = 1;
             button.innerHTML = "unmuted";
         });
     }
+}
 
-  
+
+/*music buttons*/
+document.getElementById("playpause").addEventListener("click", playPause);
+document.getElementById("muteunmute").addEventListener("click", muteUnmute);
+
 /* shuffle music when button is clicked*/
 document.getElementById("shuffle").addEventListener("click", playMusic);

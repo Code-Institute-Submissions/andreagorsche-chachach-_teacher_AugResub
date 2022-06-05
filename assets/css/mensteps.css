@@ -1,27 +1,58 @@
 
 /* add background image */
 #leading-background {
-    background-image: url(../images/backgrounds/backgroundman.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+  background-image: url(../images/backgrounds/backgroundman.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 #step-img {
     height:25rem;
 }
 
-.musicbtn{
-  width: 3rem;
-  height: 2rem;
+#dancefloormen{
+  width: 25rem;
   display:flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
-.heading, .practicetime {
+#musicpanel{
   background-color: #0B2843;
   width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.musicbtn, #startmen {
+  width: 3rem;
+  height: 2rem;
+}
 
+.heading {
+  background-color: #0B2843;
+  width: 25rem;
+  height:8rem;
+  padding-top: 1%;
+  padding-left: 1%;
+
+}
+
+#startpanel {
+  background-color: #0B2843;
+  width: 25rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#counter-div{
+  height:25rem;
+  z-index: 1;
+}
+
+#steps-div{
+  z-index:0;
+}

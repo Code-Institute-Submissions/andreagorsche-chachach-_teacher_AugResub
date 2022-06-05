@@ -14,34 +14,51 @@
     <link rel="stylesheet" href="assets/css/mensteps.css">
     <script src="https://kit.fontawesome.com/16f36d31a9.js" crossorigin="anonymous"></script>
 
-
     <title>ChaChaCha Teacher - Leading Steps</title>
 </head>
 <body>
+
+ <!-- background div-->
 <div id="leading-background">
-    <!-- dancefloor for leading steps-->
+ 
+    <!-- heading div-->
         <div class = "heading">
         <h1>ChaChaCha Teacher</h1>
         <h2>Leading Steps</h2>
         </div>
-        <div id="counter-div"></div>
+       
+        <!-- dancefloor for leading steps-->
         <div id="dancefloormen">
-            <img id="step-img" src="assets/images/dancingmen/stepsmen0.png" alt="intro-step">
-            <p class="practicetime">Practice Time: <span id="practice">00:00</span></p>
-            <button id="startmen" onclick="startDance()">Start</button>
-        </div>     
+            <!--music panel-->
+            <div id = musicpanel>
+                <button class="musicbtn" id="playpause" title="Play/Pause" onclick="playPause()">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                <button class="musicbtn" id="muteunmute" title="Un/mute" onclick="unMute()">
+                    <i class="fa-solid fa-volume-off"></i>
+                </button>
+                <button class="musicbtn" id="shuffle" title="Un/mute" onclick="playMusic()">
+                    <i class="fa-solid fa-shuffle"></i>
+                </button>
+            </div>
+        <!-- countdown div  -->
         
-        <div class = music>
-            <button class="musicbtn" id="playpause" title="Play/Pause" onclick="playPause()">
-                <i class="fa-solid fa-play"></i>
-            </button>
-            <button class="musicbtn" id="muteunmute" title="Un/mute" onclick="unMute()">
-                <i class="fa-solid fa-volume-off"></i>
-            </button>
-            <button class="musicbtn" id="shuffle" title="Un/mute" onclick="unMute()">
-                <i class="fa-solid fa-shuffle"></i>
-            </button>
-        </div>
+        <!-- steps div  -->
+            <div id="steps-div">
+            <div id="counter-div"></div>
+            <img id="step-img" src="assets/images/dancingmen/stepsmen0.png" alt="intro-step">
+            </div>
+         <!-- start panel -->   
+            <div id="startpanel"s>
+            </div>
+            <button id="startmen" onclick="startDance()">Start</button>
+            <p class="practicetime">Practice Time: <span id="practice">00:00</span></p>
+            
+         
+         
+        </div>     
+    
+    
     </div>
        
     <!--javascript integration-->
