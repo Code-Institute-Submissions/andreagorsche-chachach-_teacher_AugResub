@@ -30,7 +30,7 @@ function startDance (){
             clearInterval(downloadTimer);
             /*after countdown, music starts playing and steps start dancing*/
             playMusic();
-            loadLeadingSteps();
+            changeStepImage(0);
         } else {
             /*display counter*/
             document.getElementById("counter-div").innerHTML = countdown + " seconds remaining";
@@ -42,18 +42,19 @@ function startDance (){
 
 /* timeout to slow down dance steps (men)*/
 function changeStepImage(index) {
+    index = index % 8;
+    if(AUDIO_FILES_LIST.play == false) {
+        return
+    }
     const timeoutRef = setTimeout(function() {
-         document.getElementById('step-img').src= MENS_STEPS_IMG_LIST[index];
-         clearTimeout(timeoutRef)
-    }, index*1000);
-  }
+        loadNextStep(index)
+        clearTimeout(timeoutRef)
+        changeStepImage(index+1)
+    }, 1000);
+}
 
-/* indexing through array of dance steps (men)*/
-function loadLeadingSteps(){
-    do {
-        var i=0; i < MENS_STEPS_IMG_LIST.length; i++
-        changeStepImage(i);
-    } while(AUDIO_FILES_LIST.play === true)
+function loadNextStep(i) {
+    document.getElementById('step-img').src= MENS_STEPS_IMG_LIST[i];
 }
 
   /*generate random integer (for music array)*/
