@@ -17,8 +17,15 @@ let MENS_STEPS_IMG_LIST = [
     './assets/images/dancingmen/stepsmen8.png'
 ];
 
+let lightgrey = 'rgb(211, 211, 211)'
+
 /* Click start button to start training*/
-document.getElementById("startmen").addEventListener("click", startDance);
+document.getElementById("startmen").onclick = startMenClicked;
+
+function startMenClicked() {
+    startDance();
+    setPracticeTimes();
+}
 
 /* function for complete start process */
 function startDance (){
@@ -70,7 +77,9 @@ function playMusic(){
 }
 
 /*practice timer counting the time passed since start button was pushed*/
-document.getElementById('startmen').onclick = setInterval(practiceTime, 1000); 
+function setPracticeTimes() {
+    setInterval(practiceTime, 1000);
+}
 
 function practiceTime () {
     let timerElement = document.getElementById('practice');
@@ -79,39 +88,35 @@ function practiceTime () {
     timerElement.innerHTML = currentTime;
   }
 
-
-/*color the buttons on click. */
-document.getElementById('musicbtn').onclick = clicked();   
-
-function clicked() {
-    const btn = document.getElementById('musicbtn');
+function clicked(button_id) {
+    const btn = document.getElementById(button_id);
     const style = getComputedStyle(btn);
         console.log(style.backgroundColor);
-        if (backgroundColor == "lightgrey"){
-            changetoRed();
+        if (style.backgroundColor == lightgrey){
+            changetoRed(button_id);
         }
         else {
-            changetoGrey();
+            changetoGrey(button_id);
         }
     }
 
     /*change background color of music button to grey  */
 
-    function changetoGrey() {
-        let color0 = getElementById ("musicbtn");
-        color0.style.color = "lightgrey";
+    function changetoGrey(button_id) {
+        let color0 = document.getElementById(button_id);
+        color0.style.backgroundColor = "lightgrey";
     } 
 
-    function changetoRed() {
-        let color1 = getElementById ("musicbtn");
-        color1.style.color = "red";
+    function changetoRed(button_id) {
+        let color1 = document.getElementById(button_id);
+        color1.style.backgroundColor = "red";
     } 
 
     
 /*pause button get element by id mute direct umfärbt -- event handler wenn event feuert, bringt da nix*/
-document.getElementById('playpause').onclick = playPause;  
+document.getElementById('playpause').onclick = playPause;
 function playPause(){
-        clicked()
+        clicked('playpause')
         if(color === "red" ){
         AUDIO_FILES_LIST.pause();
       } else { if (color === "grey"){
@@ -121,9 +126,9 @@ function playPause(){
 
 
 /*mute button toggle,  pause/play direkt abfragen den CSS code*/
-document.getElementById('muteunmute').onclick = unMute(); 
+document.getElementById('muteunmute').onclick = unMute;
 function unMute(){
-         clicked()
+         clicked('muteunmute')
         if (color === "grey") {    
             AUDIO_FILES_LIST.volume = 1;
             button.innerHTML = "unmuted";
