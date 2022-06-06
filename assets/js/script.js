@@ -37,12 +37,12 @@ function startDance (){
     playMusic();
     let downloadTimer = setInterval(function(){
         if(countdown <= 0){
-            document.getElementById("counter-div").innerHTML = "Let's dance!";
+            document.getElementById("counter-div").innerHTML = "";
             clearInterval(downloadTimer);
             changeStepImage(0);
         } else {
             /*display counter*/
-            document.getElementById("counter-div").innerHTML = countdown + " seconds remaining";
+            document.getElementById("counter-div").innerHTML = countdown + " secs remaining";
         }
         countdown -= 1;
     }, 1000);
