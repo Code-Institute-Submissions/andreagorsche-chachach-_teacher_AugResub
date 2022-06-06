@@ -17,7 +17,9 @@ let MENS_STEPS_IMG_LIST = [
     './assets/images/dancingmen/stepsmen8.png'
 ];
 
-let lightgrey = 'rgb(211, 211, 211)'
+let lightgrey = 'rgb(211, 211, 211)';
+let red = 'rgb(255, 0, 0)';
+var audioRef = null;
 
 /* Click start button to start training*/
 document.getElementById("startmen").onclick = startMenClicked;
@@ -31,12 +33,12 @@ function startMenClicked() {
 function startDance (){
     /*countdown from 3 to 1 as preparation for the user to get ready*/
     let countdown = 3;
+    /*after countdown, music starts playing and steps start dancing*/
+    playMusic();
     let downloadTimer = setInterval(function(){
         if(countdown <= 0){
             document.getElementById("counter-div").innerHTML = "Let's dance!";
             clearInterval(downloadTimer);
-            /*after countdown, music starts playing and steps start dancing*/
-            playMusic();
             changeStepImage(0);
         } else {
             /*display counter*/
@@ -46,13 +48,9 @@ function startDance (){
     }, 1000);
 }
 
-
 /* timeout to slow down dance steps (men)*/
 function changeStepImage(index) {
     index = index % 8;
-    if(AUDIO_FILES_LIST.play == false) {
-        return
-    }
     const timeoutRef = setTimeout(function() {
         loadNextStep(index)
         clearTimeout(timeoutRef)
@@ -60,20 +58,21 @@ function changeStepImage(index) {
     }, 1000);
 }
 
+/*loading steps */
 function loadNextStep(i) {
     document.getElementById('step-img').src= MENS_STEPS_IMG_LIST[i];
 }
 
-  /*generate random integer (for music array)*/
+/*generate random integer (for music array)*/
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
-  }
+}
 
 /*automatic music play when start button is pushed*/
 function playMusic(){
     const randomNo = getRandomInt(AUDIO_FILES_LIST.length - 1);
-    var audio = new Audio(AUDIO_FILES_LIST[randomNo]);
-    audio.play();
+    audioRef = new Audio(AUDIO_FILES_LIST[randomNo]);
+    audioRef.play();
 }
 
 /*interval set for practice timer*/
@@ -84,68 +83,59 @@ function setPracticeTimes() {
 /*practice timer counting the time passed since start button was pushed*/
 function practiceTime () {
     let timerElement = document.getElementById('practice');
-    let currentTime = timerElement.innerHTML;
+    let currentTime = parseInt(timerElement.innerHTML);
     currentTime++;
-    timerElement.innerHTML = currentTime;
-  }
+    timerElement.innerHTML = `${currentTime} secs`;
+}
 
-  /*function to know if pause/mute button is clicked*/
+/*function to know if pause/mute button is clicked*/
 
 function clicked(button_id) {
     const btn = document.getElementById(button_id);
     const style = getComputedStyle(btn);
-        console.log(style.backgroundColor);
-        if (style.backgroundColor == lightgrey){
-            changetoRed(button_id);
-        }
-        else {
-            changetoGrey(button_id);
-        }
+    console.log(style.backgroundColor);
+    if (style.backgroundColor == lightgrey){
+        changetoRed(button_id);
     }
+    else {
+        changetoGrey(button_id);
+    }
+}
 
-    /*change background color of music button to grey  */
+/*change background color of music button to grey  */
 
-    function changetoGrey(button_id) {
-        let color0 = document.getElementById(button_id);
-        color0.style.backgroundColor = "lightgrey";
-    } 
+function changetoGrey(button_id) {
+    let color0 = document.getElementById(button_id);
+    color0.style.backgroundColor = "lightgrey";
+}
 
-    function changetoRed(button_id) {
-        let color1 = document.getElementById(button_id);
-        color1.style.backgroundColor = "red";
-    } 
+function changetoRed(button_id) {
+    let color1 = document.getElementById(button_id);
+    color1.style.backgroundColor = "red";
+}
 
-    
+
 /*pause button*/
-document.getElementById('playpause').onclick = playPause;
-function playPause(){
-        clicked('playpause')
-        if(color === "red" ){
-        AUDIO_FILES_LIST.pause();
-      } else { if (color === "grey"){
-        AUDIO_FILES_LIST.play();
-    } }
-    };
+document.getElementById('playpause').onclick = onPause;
+function onPause(){
+    clicked('playpause')
+    audioRef.pause();
+};
 
 
 /*mute button*/
 document.getElementById('muteunmute').onclick = unMute;
 function unMute(){
-         clicked('muteunmute')
-        if (color === "grey") {    
-            AUDIO_FILES_LIST.volume = 1;
-        }
-        else { if(color === "red")
-            AUDIO_FILES_LIST.volume = 0;
-        };
-    }
+    clicked('muteunmute')
+    audioRef.muted = !audioRef.muted;
+}
 
 /* shuffle music when button is clicked*/
 document.getElementById("shuffle").onclick= shuffleMusic;
 
-shuffleMusic(){
-    if (AUDIO_FILES_LIST.play === true){
-        AUDIO_FILES_LIST.stop;
-        playMusic();
-    }
+function shuffleMusic(){
+    const randomNo = getRandomInt(AUDIO_FILES_LIST.length - 1);
+    audioRef.pause();
+    audioRef = new Audio(AUDIO_FILES_LIST[randomNo]);
+    audioRef.play();
 }

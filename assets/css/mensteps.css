@@ -1,55 +1,79 @@
-
 /* add background image */
-#leading-background {
-  background-image: url(../images/backgrounds/backgroundman.jpg);
+#leading-steps {
+  background-image: url(../images/backgrounds/1_backgroundman.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  height:100%;
 }
 
-#step-img {
-    height:25rem;
-}
-
-#dancefloormen{
-  width: 25rem;
-  display:flex;
-  flex-wrap: wrap;
-}
-
-#musicpanel{
-  background-color: #0B2843;
-  width: 25rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.musicbtn, #startmen {
-  background-color: lightgrey;
-  width: 3rem;
-  height: 2rem;
-}
-
+/*format heading*/
 .heading {
   background-color: #0B2843;
   width: 25rem;
   height:8rem;
   padding-top: 1%;
   padding-left: 1%;
+  padding-right: 1%;
+  margin-bottom: 1%;
 
+}
+
+/*sizing steps area on the dancefloor*/
+#step-img {
+  height:25rem;
+}
+
+/*formatting of steps and counter area*/
+#counter-steps{
+  padding: 0.5rem;
+}
+
+/*layout and position music panel and start panel */
+#musicpanel, #startpanel {
+  background-color: #0B2843;
+  width: 24rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:1rem;
 }
 
 #startpanel {
-  background-color: #0B2843;
-  width: 25rem;
-  display:flex;
-  align-items: center;
-  justify-content: center;
+  display: flex;
   flex-direction: column;
 }
 
-#counter-div{
-  font-size: large;
-  color:red;
+/*layout and position music buttons and start button */
+.musicbtn {
+  background-color: lightgrey;
+  width: 3rem;
+  height: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  border-radius: 2%;
 }
+
+#startmen{
+  margin-left: 0%;
+  margin-top: 2rem;
+  width: 3rem;
+  height: 2rem;
+  border-radius: 2%;
+}
+
+#counter-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.1);
+  font-size: 4rem;
+  font-weight: 800;
+}
+
