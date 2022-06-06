@@ -76,17 +76,20 @@ function playMusic(){
     audio.play();
 }
 
-/*practice timer counting the time passed since start button was pushed*/
+/*interval set for practice timer*/
 function setPracticeTimes() {
     setInterval(practiceTime, 1000);
 }
 
+/*practice timer counting the time passed since start button was pushed*/
 function practiceTime () {
     let timerElement = document.getElementById('practice');
     let currentTime = timerElement.innerHTML;
     currentTime++;
     timerElement.innerHTML = currentTime;
   }
+
+  /*function to know if pause/mute button is clicked*/
 
 function clicked(button_id) {
     const btn = document.getElementById(button_id);
@@ -113,7 +116,7 @@ function clicked(button_id) {
     } 
 
     
-/*pause button get element by id mute direct umfärbt -- event handler wenn event feuert, bringt da nix*/
+/*pause button*/
 document.getElementById('playpause').onclick = playPause;
 function playPause(){
         clicked('playpause')
@@ -125,19 +128,24 @@ function playPause(){
     };
 
 
-/*mute button toggle,  pause/play direkt abfragen den CSS code*/
+/*mute button*/
 document.getElementById('muteunmute').onclick = unMute;
 function unMute(){
          clicked('muteunmute')
         if (color === "grey") {    
             AUDIO_FILES_LIST.volume = 1;
-            button.innerHTML = "unmuted";
         }
         else { if(color === "red")
             AUDIO_FILES_LIST.volume = 0;
-            button.innerHTML = "muted";
         };
     }
 
 /* shuffle music when button is clicked*/
-document.getElementById("shuffle").onclick= playMusic;
+document.getElementById("shuffle").onclick= shuffleMusic;
+
+shuffleMusic(){
+    if (AUDIO_FILES_LIST.play === true){
+        AUDIO_FILES_LIST.stop;
+        playMusic();
+    }
+}
