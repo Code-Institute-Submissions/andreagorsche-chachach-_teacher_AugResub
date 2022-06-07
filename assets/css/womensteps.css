@@ -1,6 +1,6 @@
 /* add background image */
-#leading-steps {
-  background-image: url(../images/backgrounds/1_backgroundman.jpg);
+#nonleading-steps {
+  background-image: url(../images/backgrounds/2_backgroundwomen.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -55,7 +55,7 @@
   border-radius: 20%;
 }
 
-#startmen {
+#startwomen {
   margin-left: 0%;
   margin-top: 2rem;
   width: 3rem;
