@@ -7,14 +7,14 @@ let AUDIO_FILES_LIST = [
 ];
 
 let WOMENS_STEPS_IMG_LIST = [
-    './assets/images/dancingwomen/womensteps.png',
-    './assets/images/dancingmen/womensteps2.png',
-    './assets/images/dancingmen/womensteps3.png',
-    './assets/images/dancingmen/womensteps4.png',
-    './assets/images/dancingmen/womensteps5.png',
-    './assets/images/dancingmen/womensteps6.png',
-    './assets/images/dancingmen/womensteps7.png',
-    './assets/images/dancingmen/womensteps8.png'
+    './assets/images/dancingwomen/stepswomen1.png',
+    './assets/images/dancingwomen/stepswomen2.png',
+    './assets/images/dancingwomen/stepswomen3.png',
+    './assets/images/dancingwomen/stepswomen4.png',
+    './assets/images/dancinwogmen/stepswomen5.png',
+    './assets/images/dancingwomen/stepswomen6.png',
+    './assets/images/dancingwomen/stepswomen7.png',
+    './assets/images/dancingwomen/stepswomen8.png'
 ];
 
 let lightgrey = 'rgb(211, 211, 211)';
@@ -24,6 +24,7 @@ var audioRef = null;
 /* Click start button to start training*/
 document.getElementById("startwomen").onclick = startWomenClicked;
 
+/*function initializing the start of the dance and the practice time*/
 function startWomenClicked() {
     startDance();
     setPracticeTimes();
@@ -37,12 +38,12 @@ function startDance() {
     playMusic();
     let downloadTimer = setInterval(function () {
         if (countdown <= 0) {
-            document.getElementById("counter-div").innerHTML = "";
+            document.getElementById("counter-div-women").innerHTML = "";
             clearInterval(downloadTimer);
             changeStepImage(0);
         } else {
             /*display counter*/
-            document.getElementById("counter-div").innerHTML = countdown + " secs remaining";
+            document.getElementById("counter-div-women").innerHTML = countdown + " secs remaining";
         }
         countdown -= 1;
     }, 1000);
@@ -55,12 +56,18 @@ function changeStepImage(index) {
         loadNextStep(index)
         clearTimeout(timeoutRef)
         changeStepImage(index + 1)
-    }, 1000);
+    }, 500);
 }
 
 /*loading steps */
 function loadNextStep(i) {
-    document.getElementById('step-img').src = WOMENS_STEPS_IMG_LIST[i];
+    document.getElementById('step-img-women').src = WOMENS_STEPS_IMG_LIST[i];
+}
+
+/*stop steps */
+function stopSteps() {
+    document.getElementById("counter-div-women").innerHTML = "Stopped";
+    clearTimeout(timeoutRef);
 }
 
 /*generate random integer (for music array)*/
@@ -82,7 +89,7 @@ function setPracticeTimes() {
 
 /*practice timer counting the time passed since start button was pushed*/
 function practiceTime() {
-    let timerElement = document.getElementById('practice');
+    let timerElement = document.getElementById('time-women');
     let currentTime = parseInt(timerElement.innerHTML);
     currentTime++;
     timerElement.innerHTML = `${currentTime} secs`;
@@ -118,8 +125,8 @@ function changetoRed(button_id) {
 document.getElementById('pause').onclick = onPause;
 
 function onPause() {
-    clicked('pause')
     audioRef.pause();
+    stopSteps();
 };
 
 /*mute button*/

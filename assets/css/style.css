@@ -3,29 +3,31 @@
 
 /*add background image*/
 #start-background {
-    height:100%;
+    height: 100%;
     background-image: url(../images/backgrounds/hip-hop-1873203_1920.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-  }
+}
 
 /*styling heading and paragraphs*/
-h1, h2, p {
+h1,
+h2,
+p {
     font-family: Libre Baskerville, serif;
-    color:white;
+    color: white;
     text-align: left;
 }
 
 p {
     font-family: Roboto, sans-serif;
-    color:white;
+    color: white;
     text-align: left;
 }
 
 li {
     font-family: Roboto, sans-serif;
-    color:white;
+    color: white;
     text-align: justify;
 }
 
@@ -48,6 +50,3 @@ button {
     color: #0B2843;
     margin-left: 13%;
 }
-
-
- 

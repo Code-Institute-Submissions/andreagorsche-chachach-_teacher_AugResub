@@ -24,6 +24,7 @@ var audioRef = null;
 /* Click start button to start training*/
 document.getElementById("startmen").onclick = startMenClicked;
 
+/*function initializing the start of the dance and the practice time*/
 function startMenClicked() {
     startDance();
     setPracticeTimes();
@@ -37,12 +38,12 @@ function startDance() {
     playMusic();
     let downloadTimer = setInterval(function () {
         if (countdown <= 0) {
-            document.getElementById("counter-div").innerHTML = "";
+            document.getElementById("counter-div-men").innerHTML = "";
             clearInterval(downloadTimer);
             changeStepImage(0);
         } else {
             /*display counter*/
-            document.getElementById("counter-div").innerHTML = countdown + " secs remaining";
+            document.getElementById("counter-div-men").innerHTML = countdown + " secs remaining";
         }
         countdown -= 1;
     }, 1000);
@@ -51,16 +52,22 @@ function startDance() {
 /* timeout to slow down dance steps (men)*/
 function changeStepImage(index) {
     index = index % 8;
-    const timeoutRef = setTimeout(function () {
+    timeoutRef = setTimeout(function () {
         loadNextStep(index)
         clearTimeout(timeoutRef)
         changeStepImage(index + 1)
-    }, 1000);
+    }, 800);
 }
 
 /*loading steps */
 function loadNextStep(i) {
-    document.getElementById('step-img').src = MENS_STEPS_IMG_LIST[i];
+    document.getElementById('step-img-men').src = MENS_STEPS_IMG_LIST[i];
+}
+
+/*stop steps */
+function stopSteps() {
+    document.getElementById("counter-div-men").innerHTML = "Stopped";
+    clearTimeout(timeoutRef);
 }
 
 /*generate random integer (for music array)*/
@@ -82,7 +89,7 @@ function setPracticeTimes() {
 
 /*practice timer counting the time passed since start button was pushed*/
 function practiceTime() {
-    let timerElement = document.getElementById('practice');
+    let timerElement = document.getElementById('time-men');
     let currentTime = parseInt(timerElement.innerHTML);
     currentTime++;
     timerElement.innerHTML = `${currentTime} secs`;
@@ -118,8 +125,8 @@ function changetoRed(button_id) {
 document.getElementById('pause').onclick = onPause;
 
 function onPause() {
-    clicked('pause')
     audioRef.pause();
+    stopSteps();
 };
 
 

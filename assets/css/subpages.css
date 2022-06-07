@@ -1,6 +1,16 @@
 /* add background image */
+
+/* add background image */
 #leading-steps {
   background-image: url(../images/backgrounds/1_backgroundman.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+}
+
+#nonleading-steps {
+  background-image: url(../images/backgrounds/2_backgroundwomen.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -20,50 +30,59 @@
 }
 
 /*sizing steps area on the dancefloor*/
-#step-img {
+#step-img-women,
+#step-img-men {
   height: 25rem;
 }
 
+#dancefloorwomen,
+#dancefloormen {
+  height: 25rem;
+  width: 50%;
+}
+
+
 /*formatting of steps and counter area*/
-#counter-steps {
+.counter-steps {
   padding: 0.5rem;
 }
 
 /*layout and position music panel and start panel */
-#musicpanel,
-#startpanel {
+.musicpanel,
+.startpanel {
   background-color: #0B2843;
   width: 24rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 1rem;
 }
 
-#startpanel {
+.startpanel {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 /*layout and position music buttons and start button */
 .musicbtn {
   background-color: lightgrey;
-  width: 3rem;
+  width: 4rem;
   height: 2rem;
   margin-left: 3rem;
   margin-right: 3rem;
   border-radius: 20%;
 }
 
+#startwomen,
 #startmen {
   margin-left: 0%;
-  margin-top: 2rem;
   width: 3rem;
   height: 2rem;
   border-radius: 20%;
 }
 
-#counter-div {
+#counter-div-men,
+#counter-div-women {
   position: absolute;
   height: 25rem;
   width: 25rem;

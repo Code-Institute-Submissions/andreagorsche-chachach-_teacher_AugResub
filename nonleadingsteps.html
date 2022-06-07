@@ -13,10 +13,10 @@
 
     <!--stylesheets and font awesome integration-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/womensteps.css">
+    <link rel="stylesheet" href="assets/css/subpages.css">
     <script src="https://kit.fontawesome.com/16f36d31a9.js" crossorigin="anonymous"></script>
 
-    <title>ChaChaCha Teacher - Leading Steps</title>
+    <title>ChaChaCha Teacher - Non-Leading Steps</title>
 </head>
 
 <body id="nonleading-steps">
@@ -29,10 +29,7 @@
     <!-- dancefloor for leading steps-->
     <div id="dancefloorwomen">
         <!--music panel-->
-        <div id=musicpanel>
-            <button class="musicbtn" id="pause" title="Pause" onclick="playPause()">
-                Pause
-            </button>
+        <div class=musicpanel>
             <button class="musicbtn" id="muteunmute" title="Un/mute" onclick="unMute()">
                 <i class="fa-solid fa-volume-off"></i>
             </button>
@@ -40,18 +37,21 @@
                 <i class="fa-solid fa-shuffle"></i>
             </button>
         </div>
-        <div id="counter-steps">
+        <div class="counter-steps">
             <!-- countdown div  -->
-            <div id="counter-div"></div>
+            <div id="counter-div-women"></div>
             <!-- steps div  -->
-            <div id="steps-div">
-                <img id="step-img" src="assets/images/dancingmen/womensteps.png" alt="intro-step">
+            <div class="steps-div">
+                <img id="step-img-women" src="assets/images/dancingwomen/stepswomen0.png" alt="intro-step">
             </div>
         </div>
         <!-- start panel -->
-        <div id="startpanel">
-            <button id="startwomen" onclick="startDance()">Start</button>
-            <p class="practicetime">Practice Time: <span id="practice">00:00</span></p>
+        <div class="startpanel">
+            <button id="startwomen" onclick="startWomenClicked()">Start</button>
+            <button class="musicbtn" id="pause" title="Pause" onclick="onPause()">
+                Pause
+            </button>
+            <p class="practicetime">Practice Time: <span id="time-women">00:00</span></p>
         </div>
     </div>
 
