@@ -7,14 +7,14 @@ let AUDIO_FILES_LIST = [
 ];
 
 let WOMENS_STEPS_IMG_LIST = [
-    './assets/images/dancingwomen/stepswomen1.png',
-    './assets/images/dancingwomen/stepswomen2.png',
-    './assets/images/dancingwomen/stepswomen3.png',
-    './assets/images/dancingwomen/stepswomen4.png',
-    './assets/images/dancinwogmen/stepswomen5.png',
-    './assets/images/dancingwomen/stepswomen6.png',
-    './assets/images/dancingwomen/stepswomen7.png',
-    './assets/images/dancingwomen/stepswomen8.png'
+    './assets/images/dancingwomen/stepswomen1.jpg',
+    './assets/images/dancingwomen/stepswomen2.jpg',
+    './assets/images/dancingwomen/stepswomen3.jpg',
+    './assets/images/dancingwomen/stepswomen4.jpg',
+    './assets/images/dancinwogmen/stepswomen5.jpg',
+    './assets/images/dancingwomen/stepswomen6.jpg',
+    './assets/images/dancingwomen/stepswomen7.jpg',
+    './assets/images/dancingwomen/stepswomen8.jpg'
 ];
 
 var lightgrey = 'rgb(211, 211, 211)';

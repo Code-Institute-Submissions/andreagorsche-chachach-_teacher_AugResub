@@ -217,6 +217,8 @@ The concept and writing of the code was done by me. My mentor helped me signific
 - connecting my clicked function to the mute button and making the muting work properly without an if else statement
 - helping me with logic mistakes in the code
 
+I am aware that the variables are supposed to stay local in this project. All the variables that were set global were discussed with my mentor and he recommended doing so. He didn't see a problem because they all function as constants.
+
 ## Code from Class
 The code for the practice time was very much inspired by a code sample from the course. Like explained in the debugging section the code needed adaption, still referencing it here.
 
