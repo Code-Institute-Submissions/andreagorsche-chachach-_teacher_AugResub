@@ -11,79 +11,79 @@ All three pages are responsive as shown below.
 
 ## Main Page
 
-![Main Page](/assets/images/readme/startpage.png)
+![Main Page](/assets/images/readme/interface/startpage.png)
 
 ## Leading Steps Page
 
-![Main Page](/assets/images/readme/leadingsteps.png)
+![Main Page](/assets/images/readme/interface/leadingsteps.png)
 
 ## Non-Leading Steps Page
 
-![Main Page](/assets/images/readme/nonleadingsteps.png)
+![Main Page](/assets/images/readme/interface/nonleadingsteps.png)
 
 # Features Overall
 
 ## Navigation Bar
 On top of each page there is a navigation bar allowing the user to get back to the main page or switch between the two different virtual dancefloors (leading steps and non-leading steps).
 
-![Navigation Bar](assets/images/readme/navigationbar.png)
+![Navigation Bar](assets/images/readme/interface/navigationbar.png)
 
 # Features Main Page
 
 ## Intro Box
 The introbox consists of a heading that is quickly caught by the eye of the user so they know the name of the game. Furthermore, they are informed what the game is about and given an initial choice depending on whether they want to learn the leading or non-leading steps.
 
-![Intro Box](assets/images/readme/introbox.png)
+![Intro Box](assets/images/readme/interface/introbox.png)
 
 # Features Subpages
 
 ## Subpages Title and Background
 The title of the subpage consists of the name of the game (ChaChaChaTeacher) and the chosen steps (leading or non-leading). This is important for the user to know where in the game they are and what they are about to learn. Furthermore the different backgrounds further underline if they are on the page of leading steps (usually men) or non-leading steps (usually women).
 
-![Subpages Title](assets/images/readme/subpages_title.png)
+![Subpages Title](assets/images/readme/backgroundstitles/subpages_title.png)
 
-![Background Men](assets/images/readme/backgroundmen.png)
+![Background Men](assets/images/readme/backgroundstitles/backgroundmen.png)
 
-![Background Women](assets/images/readme/backgroundwomen.png)
+![Background Women](assets/images/readme/backgroundstitles/backgroundwomen.png)
 
 ## Dancefloor
 The dancefloor is split into 3 parts. 
 
-![Complete Dancefloor](assets/images/readme/complete_dancefloor.png)
+![Complete Dancefloor](assets/images/readme/interface/complete_dancefloor.png)
 
 ### Music Panel
 
 First, there is the music panel where the user can mute and shuffle music. When the users click the mute button to stop the music, the button turns red. If they click again to continue with music, the button will turn into its original grey color.
-![Music Panel](assets/images/readme/musicpanel.png)
+![Music Panel](assets/images/readme/interface/musicpanel.png)
 
-![Mute Red](assets/images/readme/mute.png)
+![Mute Red](assets/images/readme/features/mute.png)
 
 ### Steps Area
 
 Secondly, there is the steps area with a default steps picture at the beginning. This pic is supposed to give the users a glimpse of what to expect of the animation and also to teach them how to initially put their feet.
 
-![Initial Step](assets/images/readme/dancingsteps_initial_picture.png)
+![Initial Step](assets/images/readme/interface/dancingsteps_initial_picture.png)
 
 
 ### Start Panel
 
 Thirdly, the start panel.
 
-![Start Panel](assets/images/readme/startpanel.png)
+![Start Panel](assets/images/readme/interface/startpanel.png)
 
 Here, the user can start and pause the teaching session. When pressing the start button a 3 seconds countdown will show and give the user time to get ready to dance. 
 
-![Counter And Practice Time](assets/images/readme/counterandpracticetime.png)
+![Counter And Practice Time](assets/images/readme/features/counterandpracticetime.png)
 
 The practice time starts and music already sets in so the users have time to register the music and its speed. 
 
 The speed of the music was chosen slowly on purpose to fit beginners purposes. As a last step the 8 steps sequence starts playing. It will repeat until the users press the pause button or leaves the page.
 
-![Steps Animation](assets/images/readme/steps1.png)
+![Steps Animation](assets/images/readme/features/steps1.png)
 
 When the users click the pause button the music and animation stops and the word 'Stopped' is showing in the middle of the steps section. Thus, the users know that they indeed stopped the game.
 
-![Stopped](assets/images/readme/stopped.png)
+![Stopped](assets/images/readme/features/stopped.png)
 
 # Features left to implement
 
@@ -132,8 +132,27 @@ The shuffle button was the only code that really turned out exactly as I thought
 ## Validators
 
 ### HTML
+The main page and the subpages were tested with the WRC validator for HTML and no errors occured.
+
+Main Page
+![HTML Validator Main](assets/images/readme/validators/html_mainpage_validator.png)
+
+Leading Steps
+![HTML Validator Leading](assets/images/readme/validators/html_leadingsteps_validator.png)
+
+Non-Leading Steps
+![HTML Validator Non-Leading](assets/images/readme/validators/html_non_leadingsteps_validaotr.png)
+
 ### CSS
+The main page and the subpages were tested with the (jigsaw) validator for CSS and no errors occured.
+
 ### Javascript
+The two javascript files were tested with the Jshint validator. No errors were found. 
+JS Men
+![JS Validator Men](assets/images/readme/validators/javascript_men_validator.png)
+
+JS Women
+![JS Validator Women](assets/images/readme/validators/javascript_women_validator.png)
 
 
 # Main Learnings

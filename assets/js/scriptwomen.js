@@ -17,9 +17,9 @@ let WOMENS_STEPS_IMG_LIST = [
     './assets/images/dancingwomen/stepswomen8.png'
 ];
 
-let lightgrey = 'rgb(211, 211, 211)';
-let red = 'rgb(255, 0, 0)';
+var lightgrey = 'rgb(211, 211, 211)';
 var audioRef = null;
+var timeoutRef= null;
 
 /* Click start button to start training*/
 document.getElementById("startwomen").onclick = startWomenClicked;
@@ -53,9 +53,9 @@ function startDance() {
 function changeStepImage(index) {
     index = index % 8;
     const timeoutRef = setTimeout(function () {
-        loadNextStep(index)
-        clearTimeout(timeoutRef)
-        changeStepImage(index + 1)
+        loadNextStep(index);
+        clearTimeout(timeoutRef);
+        changeStepImage(index + 1);
     }, 1000);
 }
 
@@ -127,7 +127,7 @@ document.getElementById('pause').onclick = onPause;
 function onPause() {
     audioRef.pause();
     stopSteps();
-};
+}
 
 /*mute button*/
 document.getElementById('muteunmute').onclick = unMute;

@@ -72,7 +72,6 @@ button {
 @media screen and (max-width: 400px) {
  /*styling heading and paragraphs*/
 
-
 h1,
 h2,
 p,
@@ -81,4 +80,4 @@ button
 #navigation {
     font-size: 9px;
 }
-
+}
