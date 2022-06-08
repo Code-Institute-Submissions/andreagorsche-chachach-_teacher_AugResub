@@ -1,9 +1,9 @@
 /* Definition of variable*/
 
 let AUDIO_FILES_LIST = [
-    './assets/audio/chachacha1.mp3',
-    './assets/audio/chachacha2.mp3',
-    './assets/audio/chachacha3.mp3',
+    './assets/audio/song1.mp3',
+    './assets/audio/song2.mp3',
+    './assets/audio/song3.mp3',
 ];
 
 let MENS_STEPS_IMG_LIST = [
@@ -56,7 +56,7 @@ function changeStepImage(index) {
         loadNextStep(index)
         clearTimeout(timeoutRef)
         changeStepImage(index + 1)
-    }, 800);
+    }, 1000);
 }
 
 /*loading steps */

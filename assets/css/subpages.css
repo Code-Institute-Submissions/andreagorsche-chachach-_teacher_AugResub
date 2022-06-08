@@ -1,6 +1,7 @@
-/* add background image */
+/*add Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap');
 
-/* add background image */
+/* add background images */
 #leading-steps {
   background-image: url(../images/backgrounds/1_backgroundman.jpg);
   background-repeat: no-repeat;
@@ -21,12 +22,31 @@
 .heading {
   background-color: #0B2843;
   width: 25rem;
-  height: 8rem;
+  height: 5rem;
+  font-size: 0.7rem;
   padding-top: 1%;
   padding-left: 1%;
   padding-right: 1%;
   margin-bottom: 1%;
 
+}
+
+.navigation-sub{
+  width: 24rem;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-bottom: 1%;
+  background-color: #0B2843;
+  font-size: 1.1rem;
+  color:white;
+  display: flex;
+  justify-content: center;
+
+}
+.navigation-sub > a {
+  text-decoration: none;
+  color:white;
+  margin:2%;
 }
 
 /*sizing steps area on the dancefloor*/
@@ -94,4 +114,57 @@
   font-weight: 800;
   color: red;
   padding-left: 2rem;
+}
+
+/* On screens that are 400px or less, set the background color to olive */
+@media screen and (max-width: 400px) {
+  .heading {
+    font-size:9px;
+    width: 15rem;
+    height: 4rem;
+    padding-top: 0.5%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    margin-bottom: 0.5%;
+  }
+
+  .musicpanel,
+  .startpanel {
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.1rem;
+    font-size:9px;
+  }
+
+  .startpanel {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /*sizing steps area on the dancefloor*/
+  #step-img-women,
+  #step-img-men {
+    height: 15rem;
+  }
+
+  #dancefloorwomen,
+  #dancefloormen {
+    height: 15rem;
+    width: 25%;
+  }
+
+  /*layout and position music buttons and start button */
+.musicbtn {
+  background-color: lightgrey;
+  width: 3rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 10%;
+}
+.navigation-sub{
+  font-size: 0.8rem;
+}
 }

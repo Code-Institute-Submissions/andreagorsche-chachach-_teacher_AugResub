@@ -1,108 +1,197 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Welcome to the ChaChaCha Teacher Website,
 
-Welcome andreagorsche,
+You want to learn how to dance the ChaChaCha? Then my webiste is the place to go. In an interactive game the users can learn the basic dancing steps with or without music, stopping and getting back at it as they choose, shuffle through the provided music and track their practice time.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+In an initial step the users are asked whether they want to learn the leading steps of the dance or the non-leading steps. Then they are directed to the according sub-page where the dancing fun starts. 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+The site is targeted at users who have no or only minimum knowledge of the dance and need to learn the basics fast and uncomplicated. They might have a wedding, school dance or party coming up where they have to dance or should be able to. If time is too short to book a live dancing class or maybe the users want to save the cash, ChaChaCha Teacher is the place they go to.
 
-## Gitpod Reminders
+# Responsiveness
+All three pages are responsive as shown below.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Main Page
 
-`python3 -m http.server`
+![Main Page](/assets/images/readme/startpage.png)
 
-A blue button should appear to click: _Make Public_,
+## Leading Steps Page
 
-Another blue button should appear to click: _Open Browser_.
+![Main Page](/assets/images/readme/leadingsteps.png)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Non-Leading Steps Page
 
-A blue button should appear to click: _Make Public_,
+![Main Page](/assets/images/readme/nonleadingsteps.png)
 
-Another blue button should appear to click: _Open Browser_.
+# Features Overall
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Navigation Bar
+On top of each page there is a navigation bar allowing the user to get back to the main page or switch between the two different virtual dancefloors (leading steps and non-leading steps).
 
-To log into the Heroku toolbelt CLI:
+![Navigation Bar](assets/images/readme/navigationbar.png)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+# Features Main Page
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Intro Box
+The introbox consists of a heading that is quickly caught by the eye of the user so they know the name of the game. Furthermore, they are informed what the game is about and given an initial choice depending on whether they want to learn the leading or non-leading steps.
 
-------
+![Intro Box](assets/images/readme/introbox.png)
 
-## Release History
+# Features Subpages
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Subpages Title and Background
+The title of the subpage consists of the name of the game (ChaChaChaTeacher) and the chosen steps (leading or non-leading). This is important for the user to know where in the game they are and what they are about to learn. Furthermore the different backgrounds further underline if they are on the page of leading steps (usually men) or non-leading steps (usually women).
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+![Subpages Title](assets/images/readme/subpages_title.png)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![Background Men](assets/images/readme/backgroundmen.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+![Background Women](assets/images/readme/backgroundwomen.png)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+## Dancefloor
+The dancefloor is split into 3 parts. 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![Complete Dancefloor](assets/images/readme/complete_dancefloor.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Music Panel
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+First, there is the music panel where the user can mute and shuffle music. When the users click the mute button to stop the music, the button turns red. If they click again to continue with music, the button will turn into its original grey color.
+![Music Panel](assets/images/readme/musicpanel.png)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![Mute Red](assets/images/readme/mute.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Steps Area
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Secondly, there is the steps area with a default steps picture at the beginning. This pic is supposed to give the users a glimpse of what to expect of the animation and also to teach them how to initially put their feet.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![Initial Step](assets/images/readme/dancingsteps_initial_picture.png)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Start Panel
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Thirdly, the start panel.
 
-------
+![Start Panel](assets/images/readme/startpanel.png)
 
-## FAQ about the uptime script
+Here, the user can start and pause the teaching session. When pressing the start button a 3 seconds countdown will show and give the user time to get ready to dance. 
 
-**Why have you added this script?**
+![Counter And Practice Time](assets/images/readme/counterandpracticetime.png)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+The practice time starts and music already sets in so the users have time to register the music and its speed. 
 
-**How will this affect me?**
+The speed of the music was chosen slowly on purpose to fit beginners purposes. As a last step the 8 steps sequence starts playing. It will repeat until the users press the pause button or leaves the page.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+![Steps Animation](assets/images/readme/steps1.png)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+When the users click the pause button the music and animation stops and the word 'Stopped' is showing in the middle of the steps section. Thus, the users know that they indeed stopped the game.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![Stopped](assets/images/readme/stopped.png)
 
-**So….?**
+# Features left to implement
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+There are a few features that could be implemented in the future:
 
-**Can I opt out?**
+-  more types of dances (renaming the game to 'Dance Teacher')
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+-  a two-player mode where the users can practice side by side
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+- add different difficulty levels 
 
-**Anything more?**
+- add the possibility to play with usernames, tracking and ranking the best players by practice time and/or levels completed
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+# Testing
 
----
+Throughout the coding process I did test and debug the code over and over, trying different features and ways to get them going best. This is also visible in the commit protocol.
 
-Happy coding!
+## Central Debugging Cases
+
+### Timeout 
+When starting the project I had a clear vision of looping through an array of pictures in my head. Little did I know how complex this would get.
+A main learning was that without a Timeout the pictures are shown too fast and the users will not be able to comprehend. Thanks to my mentor on helping me solve that problem.
+
+### Indexing Multiple Times
+Initially starting with a for loop, I soon realized that another approach might be more efficient. Looping through the array multiple times was not possible in the first version I had. Instead it stopped after 8 steps and the music continued playing. A pity. So I changed the function changeStepImage, added an index with modulator. By calling the function at the end again, refering to that index and adding a +1 to it, the magic was done.
+
+### Making the Steps Stop
+While stopping the music was quite straight forward, considering there are pre-defined functions to pause and play music, I had quite a hard time figuring out how to stop the iterating array once started. I tried first to connect it to whether the music was playing or not. So, only play the steps if the music is playing (not muted, not ended, not paused). But I couldn't make that work and I figured a more straightforward approach was needed.
+
+I read in more detail about the setTimeout function and its clearTimeout function. I realized that I needed to clear the Timeout to make the steps stop. At the same time I wanted the user to know that they stopped the steps that's why I integrated the message with an innerHTML.
+
+### Making the Counter Work
+The counter didn't work until my mentor pointed out that I needed the setInterval function to make it work.
+
+Another challenge with the counter the positioning above the steps div. First I tried to solve it with the z-index but eventuelly with the position property it was much easier.
+
+### Setting up the Practice Time
+The idea for the practice time came from one of the classes examples. I actually thought it would be copy/paste but I wanted the feature to work onclick not as soon as the page loaded. So I needed to adapt the code. My mentor helped me hear by pointing out the parseInt function to me which converts string to integers.
+
+### Coloring the Mute Button
+The idea behind coloring the button in click was to give the button a value (red or grey) and depending on that value the program knows what to do (e.g. play music, stop music). And I was right, from the time the color work, the music stopped due to the according function.
+
+### Shuffle Music
+The shuffle button was the only code that really turned out exactly as I thought of it before. I knew I would need Math.floor and Math.random and that is exactly how it turned out. When addressing the array I made a mistake my mentor found and explained to me: Never address the array, address the variable representing each single element of the array.
+
+## Validators
+
+### HTML
+### CSS
+### Javascript
+
+
+# Main Learnings
+## Number of Functions
+I had like 6 functions on my first draft only to have many, many more in the end. I realized that some concepts I had in my mind for one function was too complex or just required sub-functions. Like e.g. having 2 functions for the random shuffle - 1 function to generate the random number and one to execute the shuffle.
+
+## Properties vs Functions
+In one if else I tried to write a condition connected to a function. A big no, no. Never use functions for conditions, use properties.
+
+## Array vs Element
+When doing the shuffle function and the iteration through the picture array I addressed the array itself. My mentor told me that I always need to address the variable representing the single elements of an array.
+
+# Understanding the Difference Between onclick and addEventListener
+I played around a lot with calling functions on click. Thereby I tested the two possible ways 'on click' and 'addEventListener'. I realized that 'onclick' overwrites if used multiple times and addEventListener can actually be used on one button multiple times.
+
+# Understanding the Difference Between setTimeout and setInterval
+When trying to solve my problem of stopping the steps on pause click, I read a lot about setTimeout and setIntervals, watched videos and got behind their systematic. They will definitely be very helpful in the future. I have new project ideas already.
+
+# Calling multiple Functions a once
+Pretty early on in the project I realized that pressing the start button will have to do multiple things:
+- run a counter
+- start the music
+- load the pic array 
+- start the practice time
+
+Although I think it was mentioned in the class that one function can call on other functions, I realized how crucial this is when starting to code my start button features. I also realized in that context how important a clear structure and naming of functions is.
+
+# Deployment
+The project ChaChaCha teacher was deplayed using GitHub pages. Therefore, I went to the GitHub  website and:
+- picked the repository 
+- clicked on settings
+- choose the tab 'pages'
+- in the source section I clicked on the drop-down     menu, choose main and clicked save
+
+The website refreshed revealing the link to the published page which you can find here:
+https://andreagorsche.github.io/chachach-_teacher/
+
+# Credits
+
+## Mentor Help
+The concept and writing of the code was done by me. My mentor helped me significantly in understanding the Javascript logic, especially in the following parts (also mentioned in the deployment section):
+- addressing music in array (via variable)
+- showing me how to use setInterval and setTimeout to make the practice time, the counter and my steps array work out
+- introducting me to parseInt without which the practice time display wouldn't have happend
+- connecting my clicked function to the mute button and making the muting work properly without an if else statement
+- helping me with logic mistakes in the code
+
+## Code from Class
+The code for the practice time was very much inspired by a code sample from the course. Like explained in the debugging section the code needed adaption, still referencing it here.
+
+Special thanks to my mentor who always makes the most out of our sessions.
+
+## Pictures
+
+The background pictures and also the initial step pic were taken from pixabay for free. It can be used without further reference also commercially.
+
+## Steps for animation
+The dancing steps were done for the array (yellow steps moving) were done by me in photoshop based on the step pic from pixabay.
+
+## Music
+The three songs were taken from bensound.com a platform for free music use. It can be used without further reference.
