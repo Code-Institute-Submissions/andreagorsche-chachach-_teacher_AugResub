@@ -31,6 +31,7 @@
 
 }
 
+/*format navigation*/
 .navigation-sub {
   width: 24rem;
   padding-left: 2%;
@@ -50,7 +51,7 @@
   margin: 2%;
 }
 
-/*sizing steps area on the dancefloor*/
+/*sizing steps area and the dancefloor*/
 #step-img-women,
 #step-img-men {
   height: 25rem;
@@ -102,6 +103,7 @@
   border-radius: 20%;
 }
 
+/*layout counter div */
 #counter-div-men,
 #counter-div-women {
   position: absolute;

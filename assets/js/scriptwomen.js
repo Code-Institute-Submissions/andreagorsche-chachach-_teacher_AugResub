@@ -30,7 +30,7 @@ function startWomenClicked() {
     setPracticeTimes();
 }
 
-/* function for complete start process */
+/* function to start the dance */
 function startDance() {
     /*countdown from 3 to 1 as preparation for the user to get ready*/
     let countdown = 3;
@@ -49,7 +49,7 @@ function startDance() {
     }, 1000);
 }
 
-/* timeout to slow down dance steps (men)*/
+/* timeout to slow down dance steps (women)*/
 function changeStepImage(index) {
     index = index % 8;
     const timeoutRef = setTimeout(function () {
@@ -108,7 +108,7 @@ function clicked(button_id) {
     }
 }
 
-/*change background color of music button to grey  */
+/*change background color of music button to grey/red */
 
 function changetoGrey(button_id) {
     let color0 = document.getElementById(button_id);
