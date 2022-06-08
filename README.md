@@ -1,10 +1,10 @@
-# Welcome to the ChaChaCha Teacher Website,
+# Welcome to the ChaChaCha-Teacher Website,
 
-You want to learn how to dance the ChaChaCha? Then my webiste is the place to go. In an interactive game the users can learn the basic dancing steps with or without music, stopping and getting back at it as they choose, shuffle through the provided music and track their practice time.
+You want to learn how to dance the ChaChaCha? Then my website is the place to go. In an interactive game the users can learn the basic dancing steps with or without music, pause as they choose, shuffle through the provided music and track their practice time.
 
-In an initial step the users are asked whether they want to learn the leading steps of the dance or the non-leading steps. Then they are directed to the according sub-page where the dancing fun starts. 
+In an initial step the users are asked whether they want to learn the leading steps of the dance or the non-leading steps. Then they are directed to the according subpage where the dancing fun starts. 
 
-The site is targeted at users who have no or only minimum knowledge of the dance and need to learn the basics fast and uncomplicated. They might have a wedding, school dance or party coming up where they have to dance or should be able to. If time is too short to book a live dancing class or maybe the users want to save the cash, ChaChaCha Teacher is the place they go to.
+The site is targeted at users who have no or only minimum knowledge of the ChaChaCha dance and need to learn the basics fast and uncomplicated. They might have a wedding, school dance or party coming up where they have to dance or should be able to. If time is too short to book a live dancing class or maybe the users want to save the cash, ChaChaCha Teacher is the place they go to.
 
 # Responsiveness
 All three pages are responsive as shown below.
@@ -31,14 +31,14 @@ On top of each page there is a navigation bar allowing the user to get back to t
 # Features Main Page
 
 ## Intro Box
-The introbox consists of a heading that is quickly caught by the eye of the user so they know the name of the game. Furthermore, they are informed what the game is about and given an initial choice depending on whether they want to learn the leading or non-leading steps.
+The introbox consists of a heading that is quickly caught by the eye of the user so they know the name of the game. Furthermore, the users are informed what the game is about and given an initial choice depending on whether they want to learn the leading or non-leading steps.
 
 ![Intro Box](assets/images/readme/interface/introbox.png)
 
 # Features Subpages
 
 ## Subpages Title and Background
-The title of the subpage consists of the name of the game (ChaChaChaTeacher) and the chosen steps (leading or non-leading). This is important for the user to know where in the game they are and what they are about to learn. Furthermore the different backgrounds further underline if they are on the page of leading steps (usually men) or non-leading steps (usually women).
+The title of the subpage consists of the name of the game (ChaChaChaTeacher) and the chosen steps (leading or non-leading). This is important for the user to know where in the game they are and what they are about to learn. Furthermore, the different backgrounds underline if the users are on the page of leading steps (usually men) or non-leading steps (usually women).
 
 ![Subpages Title](assets/images/readme/backgroundstitles/subpages_title.png)
 
@@ -53,7 +53,7 @@ The dancefloor is split into 3 parts.
 
 ### Music Panel
 
-First, there is the music panel where the user can mute and shuffle music. When the users click the mute button to stop the music, the button turns red. If they click again to continue with music, the button will turn into its original grey color.
+First, there is the music panel where the users can mute and shuffle music. When the users click the mute button to stop the music, the button turns red. If they click again to continue with music, the button will turn into its original grey color.
 ![Music Panel](assets/images/readme/interface/musicpanel.png)
 
 ![Mute Red](assets/images/readme/features/mute.png)
@@ -77,7 +77,7 @@ Here, the user can start and pause the teaching session. When pressing the start
 
 The practice time starts and music already sets in so the users have time to register the music and its speed. 
 
-The speed of the music was chosen slowly on purpose to fit beginners purposes. As a last step the 8 steps sequence starts playing. It will repeat until the users press the pause button or leaves the page.
+The speed of the music was chosen slowly on purpose to fit beginners purposes. As a last step the 8 steps sequence starts playing. It will repeat until the users press the pause button or leave the page.
 
 ![Steps Animation](assets/images/readme/features/steps1.png)
 
@@ -93,7 +93,7 @@ There are a few features that could be implemented in the future:
 
 -  a two-player mode where the users can practice side by side
 
-- add different difficulty levels 
+-  add different difficulty levels 
 
 - add the possibility to play with usernames, tracking and ranking the best players by practice time and/or levels completed
 
@@ -111,20 +111,20 @@ A main learning was that without a Timeout the pictures are shown too fast and t
 Initially starting with a for loop, I soon realized that another approach might be more efficient. Looping through the array multiple times was not possible in the first version I had. Instead it stopped after 8 steps and the music continued playing. A pity. So I changed the function changeStepImage, added an index with modulator. By calling the function at the end again, refering to that index and adding a +1 to it, the magic was done.
 
 ### Making the Steps Stop
-While stopping the music was quite straight forward, considering there are pre-defined functions to pause and play music, I had quite a hard time figuring out how to stop the iterating array once started. I tried first to connect it to whether the music was playing or not. So, only play the steps if the music is playing (not muted, not ended, not paused). But I couldn't make that work and I figured a more straightforward approach was needed.
+While stopping the music was quite straight forward, considering there are pre-defined functions to pause and play music, I had quite a hard time figuring out how to stop the iterating pic array once started. I tried first to connect it to whether the music was playing or not. So,  the steps should only play if the music is playing ( if not muted, not ended, not paused). But I couldn't make that work and I figured a more straightforward approach was needed.
 
 I read in more detail about the setTimeout function and its clearTimeout function. I realized that I needed to clear the Timeout to make the steps stop. At the same time I wanted the user to know that they stopped the steps that's why I integrated the message with an innerHTML.
 
 ### Making the Counter Work
 The counter didn't work until my mentor pointed out that I needed the setInterval function to make it work.
 
-Another challenge with the counter the positioning above the steps div. First I tried to solve it with the z-index but eventuelly with the position property it was much easier.
+Another challenge with the counter was the positioning as a layer over the steps. First I tried to solve it with the z-index but eventuelly with the position property it was much easier.
 
 ### Setting up the Practice Time
-The idea for the practice time came from one of the classes examples. I actually thought it would be copy/paste but I wanted the feature to work onclick not as soon as the page loaded. So I needed to adapt the code. My mentor helped me hear by pointing out the parseInt function to me which converts string to integers.
+The idea for the practice time came from one of the classes examples. I actually thought it would be copy/paste but I wanted the feature to work onclick not as soon as the page loaded. So I needed to adapt the code. My mentor helped me here by pointing out the parseInt function to me which converts string to integers.
 
 ### Coloring the Mute Button
-The idea behind coloring the button in click was to give the button a value (red or grey) and depending on that value the program knows what to do (e.g. play music, stop music). And I was right, from the time the color work, the music stopped due to the according function.
+The idea behind coloring the button on click was to give the button a status (red or grey) and depending on that status the program knows what to do (e.g. play music, stop music). And I was right, from the time the color worked, the music stopped due to the according function.
 
 ### Shuffle Music
 The shuffle button was the only code that really turned out exactly as I thought of it before. I knew I would need Math.floor and Math.random and that is exactly how it turned out. When addressing the array I made a mistake my mentor found and explained to me: Never address the array, address the variable representing each single element of the array.
@@ -134,44 +134,61 @@ The shuffle button was the only code that really turned out exactly as I thought
 ### HTML
 The main page and the subpages were tested with the WRC validator for HTML and no errors occured.
 
-Main Page
+### Main Page
+
 ![HTML Validator Main](assets/images/readme/validators/html_mainpage_validator.png)
 
-Leading Steps
+### Leading Steps
+
 ![HTML Validator Leading](assets/images/readme/validators/html_leadingsteps_validator.png)
 
-Non-Leading Steps
-![HTML Validator Non-Leading](assets/images/readme/validators/html_non_leadingsteps_validaotr.png)
+### Non-Leading Steps
+![HTML Validator Non-Leading](assets/images/readme/validators/html_non_leadingsteps_validator.png)
 
 ### CSS
 The main page and the subpages were tested with the (jigsaw) validator for CSS and no errors occured.
 
+### Main Page
+
+![CSS Validator Main](assets/images/readme/validators/css_mainpage_validator.png)
+
+### Leading Steps
+
+![CSS Validator Leading](assets/images/readme/validators/css_leadingsteps_validator.png)
+
+### Non-Leading Steps
+
+![CSS Validator Non-Leading](assets/images/readme/validators/css_nonleadingsteps_validator.png)
+
 ### Javascript
 The two javascript files were tested with the Jshint validator. No errors were found. 
-JS Men
+
+### JS Men
+
 ![JS Validator Men](assets/images/readme/validators/javascript_men_validator.png)
 
-JS Women
+### JS Women
+
 ![JS Validator Women](assets/images/readme/validators/javascript_women_validator.png)
 
 
 # Main Learnings
 ## Number of Functions
-I had like 6 functions on my first draft only to have many, many more in the end. I realized that some concepts I had in my mind for one function was too complex or just required sub-functions. Like e.g. having 2 functions for the random shuffle - 1 function to generate the random number and one to execute the shuffle.
+I had like 6 functions on my first draft only to have many, many more in the end. I realized that some concepts I had in my mind for one function were too complex or just required sub-functions. Like e.g. having 2 functions for the random shuffle - 1 function to generate the random number and one to execute the shuffle. Due to easier readability and structure I added functions were needed.
 
 ## Properties vs Functions
-In one if else I tried to write a condition connected to a function. A big no, no. Never use functions for conditions, use properties.
+In one if else statement I tried to write a condition connected to a function. A big no, no. Never use functions for conditions, use properties.
 
 ## Array vs Element
 When doing the shuffle function and the iteration through the picture array I addressed the array itself. My mentor told me that I always need to address the variable representing the single elements of an array.
 
-# Understanding the Difference Between onclick and addEventListener
+## Understanding the Difference Between onclick and addEventListener
 I played around a lot with calling functions on click. Thereby I tested the two possible ways 'on click' and 'addEventListener'. I realized that 'onclick' overwrites if used multiple times and addEventListener can actually be used on one button multiple times.
 
-# Understanding the Difference Between setTimeout and setInterval
-When trying to solve my problem of stopping the steps on pause click, I read a lot about setTimeout and setIntervals, watched videos and got behind their systematic. They will definitely be very helpful in the future. I have new project ideas already.
+## Understanding the Difference Between setTimeout and setInterval
+When trying to solve my problem of stopping the steps on pause click, I read a lot about setTimeout and setInterval, watched videos and got behind their systematic. They will definitely be very helpful in the future. I have new project ideas already.
 
-# Calling multiple Functions a once
+## Calling Multiple Functions at Once
 Pretty early on in the project I realized that pressing the start button will have to do multiple things:
 - run a counter
 - start the music
@@ -181,11 +198,11 @@ Pretty early on in the project I realized that pressing the start button will ha
 Although I think it was mentioned in the class that one function can call on other functions, I realized how crucial this is when starting to code my start button features. I also realized in that context how important a clear structure and naming of functions is.
 
 # Deployment
-The project ChaChaCha teacher was deplayed using GitHub pages. Therefore, I went to the GitHub  website and:
+The project ChaChaCha Teacher was deployed using GitHub pages. Therefore, I went to the GitHub website and:
 - picked the repository 
 - clicked on settings
 - choose the tab 'pages'
-- in the source section I clicked on the drop-down     menu, choose main and clicked save
+- in the source section I clicked on the drop-down menu, choose main and clicked save
 
 The website refreshed revealing the link to the published page which you can find here:
 https://andreagorsche.github.io/chachach-_teacher/
@@ -207,10 +224,10 @@ Special thanks to my mentor who always makes the most out of our sessions.
 
 ## Pictures
 
-The background pictures and also the initial step pic were taken from pixabay for free. It can be used without further reference also commercially.
+The background pictures and also the initial step pic were taken from Pixabay for free. It can be used without further reference, also commercially.
 
 ## Steps for animation
-The dancing steps were done for the array (yellow steps moving) were done by me in photoshop based on the step pic from pixabay.
+The dancing steps for the array (moving yellow steps) were done by me in Photoshop based on the step pic from Pixabay.
 
 ## Music
 The three songs were taken from bensound.com a platform for free music use. It can be used without further reference.

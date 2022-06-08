@@ -38,7 +38,7 @@ let MENS_STEPS_IMG_LIST = [
 
 var lightgrey = 'rgb(211, 211, 211)';
 var audioRef = null;
-var timeoutRef= null;
+var timeoutRef = null;
 
 /* Click start button to start training*/
 document.getElementById("startmen").onclick = startMenClicked;

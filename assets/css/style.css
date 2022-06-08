@@ -10,22 +10,22 @@
     background-size: cover;
 }
 
-#navigation{
+#navigation {
     width: 22rem;
     padding: 1.7%;
     background-color: #0B2843;
-    opacity:0.8;
+    opacity: 0.8;
     font-size: 1.1rem;
     display: flex;
     justify-content: center;
 
 }
 
-#navigation > a {
+#navigation>a {
     text-decoration: none;
-    color:white;
-    margin:2%;
-  }
+    color: white;
+    margin: 2%;
+}
 
 /*styling heading and paragraphs*/
 h1,
@@ -70,14 +70,13 @@ button {
 
 /* On screens that are 400px or less, set the background color to olive */
 @media screen and (max-width: 400px) {
- /*styling heading and paragraphs*/
+    /*styling heading and paragraphs*/
 
-h1,
-h2,
-p,
-li,
-button
-#navigation {
-    font-size: 9px;
-}
+    h1,
+    h2,
+    p,
+    li,
+    button #navigation {
+        font-size: 9px;
+    }
 }

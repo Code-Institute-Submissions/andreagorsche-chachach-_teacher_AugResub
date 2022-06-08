@@ -31,22 +31,23 @@
 
 }
 
-.navigation-sub{
+.navigation-sub {
   width: 24rem;
   padding-left: 2%;
   padding-right: 2%;
   margin-bottom: 1%;
   background-color: #0B2843;
   font-size: 1.1rem;
-  color:white;
+  color: white;
   display: flex;
   justify-content: center;
 
 }
-.navigation-sub > a {
+
+.navigation-sub>a {
   text-decoration: none;
-  color:white;
-  margin:2%;
+  color: white;
+  margin: 2%;
 }
 
 /*sizing steps area on the dancefloor*/
@@ -119,7 +120,7 @@
 /* On screens that are 400px or less, set the background color to olive */
 @media screen and (max-width: 400px) {
   .heading {
-    font-size:9px;
+    font-size: 9px;
     width: 15rem;
     height: 4rem;
     padding-top: 0.5%;
@@ -135,7 +136,7 @@
     justify-content: center;
     align-items: center;
     padding: 0.1rem;
-    font-size:9px;
+    font-size: 9px;
   }
 
   .startpanel {
@@ -156,15 +157,16 @@
   }
 
   /*layout and position music buttons and start button */
-.musicbtn {
-  background-color: lightgrey;
-  width: 3rem;
-  height: 1.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  border-radius: 10%;
-}
-.navigation-sub{
-  font-size: 0.8rem;
-}
+  .musicbtn {
+    background-color: lightgrey;
+    width: 3rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 10%;
+  }
+
+  .navigation-sub {
+    font-size: 0.8rem;
+  }
 }
