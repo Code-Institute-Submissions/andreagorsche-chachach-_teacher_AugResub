@@ -11,7 +11,7 @@ let WOMENS_STEPS_IMG_LIST = [
     './assets/images/dancingwomen/stepswomen2.jpg',
     './assets/images/dancingwomen/stepswomen3.jpg',
     './assets/images/dancingwomen/stepswomen4.jpg',
-    './assets/images/dancinwogmen/stepswomen5.jpg',
+    './assets/images/dancingwomen/stepswomen5.jpg',
     './assets/images/dancingwomen/stepswomen6.jpg',
     './assets/images/dancingwomen/stepswomen7.jpg',
     './assets/images/dancingwomen/stepswomen8.jpg'
@@ -52,7 +52,7 @@ function startDance() {
 /* timeout to slow down dance steps (women)*/
 function changeStepImage(index) {
     index = index % 8;
-    const timeoutRef = setTimeout(function () {
+    timeoutRef = setTimeout(function () {
         loadNextStep(index);
         clearTimeout(timeoutRef);
         changeStepImage(index + 1);
