@@ -82,9 +82,6 @@ function playMusic() {
     audioRef = new Audio(AUDIO_FILES_LIST[randomNo]);
     audioRef.play();
 }
-
-
-
 	
 /* enable and disable mute and shuffle button*/
 
