@@ -19,7 +19,9 @@ let WOMENS_STEPS_IMG_LIST = [
 
 var lightgrey = 'rgb(211, 211, 211)';
 var audioRef = null;
-var timeoutRef = null, practiceTimerRef = null, downloadTimerRef = null;
+var timeoutRef = null;
+var practiceTimerRef = null;
+var downloadTimerRef = null;
 
 /* Click start button to start training*/
 document.getElementById("startwomen").onclick = startWomenClicked;
@@ -28,6 +30,7 @@ document.getElementById("startwomen").onclick = startWomenClicked;
 function startWomenClicked() {
     startDance();
     setPracticeTimes();
+    document.getElementById("startwomen").disabled = true;
 }
 
 /* function to start the dance */
@@ -84,7 +87,6 @@ function playMusic() {
 }
 
 /* enable and disable mute and shuffle button*/
-
 function enableMusicControls() {
     document.getElementById('muteunmute').disabled = false;
     document.getElementById("shuffle").disabled = false;
@@ -94,7 +96,6 @@ function disableMusicControls() {
     document.getElementById('muteunmute').disabled = true;
     document.getElementById("shuffle").disabled = true;
 }
-
 
 /*interval set for practice timer*/
 function setPracticeTimes() {
@@ -114,7 +115,6 @@ function practiceTime() {
 }
 
 /*function to know if pause/mute button is clicked*/
-
 function clicked(button_id) {
     const btn = document.getElementById(button_id);
     const style = getComputedStyle(btn);
@@ -126,7 +126,6 @@ function clicked(button_id) {
 }
 
 /*change background color of music button to grey/red */
-
 function changetoGrey(button_id) {
     let color0 = document.getElementById(button_id);
     color0.style.backgroundColor = "lightgrey";
@@ -142,12 +141,13 @@ function changetoRed(button_id) {
 document.getElementById('pause').onclick = onPause;
 
 function onPause() {
-    if(audioRef) {
+    if (audioRef) {
         clearInterval(downloadTimerRef);
         disableMusicControls();
         audioRef.pause();
         stopSteps();
         stopPracticeTime();
+        document.getElementById("startwomen").disabled = false;
     }
 }
 
@@ -155,7 +155,7 @@ function onPause() {
 document.getElementById('muteunmute').onclick = unMute;
 
 function unMute() {
-    if(audioRef) {
+    if (audioRef) {
         clicked('muteunmute')
         audioRef.muted = !audioRef.muted;
     }
@@ -165,7 +165,7 @@ function unMute() {
 document.getElementById("shuffle").onclick = shuffleMusic;
 
 function shuffleMusic() {
-    if(audioRef) {
+    if (audioRef) {
         const randomNo = getRandomInt(AUDIO_FILES_LIST.length - 1);
         audioRef.pause();
         audioRef = new Audio(AUDIO_FILES_LIST[randomNo]);

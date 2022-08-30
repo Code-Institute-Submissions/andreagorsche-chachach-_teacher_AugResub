@@ -19,7 +19,9 @@ let MENS_STEPS_IMG_LIST = [
 
 var lightgrey = 'rgb(211, 211, 211)';
 var audioRef = null;
-var timeoutRef = null, practiceTimerRef = null, downloadTimerRef = null; 
+var timeoutRef = null;
+var practiceTimerRef = null;
+var downloadTimerRef = null;
 
 /* Click start button to start training*/
 document.getElementById("startmen").onclick = startMenClicked;
@@ -28,6 +30,7 @@ document.getElementById("startmen").onclick = startMenClicked;
 function startMenClicked() {
     startDance();
     setPracticeTimes();
+    document.getElementById("startmen").disabled = true;
 }
 
 /* function to start the dance */
@@ -77,14 +80,13 @@ function getRandomInt(max) {
 
 /*automatic music play when start button is pushed*/
 function playMusic() {
-    enableMusicControls(); 
+    enableMusicControls();
     const randomNo = getRandomInt(AUDIO_FILES_LIST.length - 1);
     audioRef = new Audio(AUDIO_FILES_LIST[randomNo]);
     audioRef.play();
 }
-	
-/* enable and disable mute and shuffle button*/
 
+/* enable and disable mute and shuffle button*/
 function enableMusicControls() {
     document.getElementById('muteunmute').disabled = false;
     document.getElementById("shuffle").disabled = false;
@@ -93,7 +95,7 @@ function enableMusicControls() {
 function disableMusicControls() {
     document.getElementById('muteunmute').disabled = true;
     document.getElementById("shuffle").disabled = true;
-} 
+}
 
 /*interval set for practice timer*/
 function setPracticeTimes() {
@@ -140,12 +142,13 @@ function changetoRed(button_id) {
 document.getElementById('pause').onclick = onPause;
 
 function onPause() {
-    if(audioRef) {
-    clearInterval(downloadTimerRef);
-    disableMusicControls();
-    audioRef.pause();
-    stopSteps();
-    stopPracticeTime();
+    if (audioRef) {
+        clearInterval(downloadTimerRef);
+        disableMusicControls();
+        audioRef.pause();
+        stopSteps();
+        stopPracticeTime();
+        document.getElementById("startmen").disabled = false;
     }
 }
 
@@ -154,9 +157,9 @@ function onPause() {
 document.getElementById('muteunmute').onclick = unMute;
 
 function unMute() {
-    if(audioRef) { 
-    clicked('muteunmute');
-    audioRef.muted = !audioRef.muted;
+    if (audioRef) {
+        clicked('muteunmute');
+        audioRef.muted = !audioRef.muted;
     }
 }
 
@@ -164,10 +167,10 @@ function unMute() {
 document.getElementById("shuffle").onclick = shuffleMusic;
 
 function shuffleMusic() {
-    if(audioRef) {
-    const randomNo = getRandomInt(AUDIO_FILES_LIST.length - 1);
-    audioRef.pause();
-    audioRef = new Audio(AUDIO_FILES_LIST[randomNo]);
-    audioRef.play();
+    if (audioRef) {
+        const randomNo = getRandomInt(AUDIO_FILES_LIST.length - 1);
+        audioRef.pause();
+        audioRef = new Audio(AUDIO_FILES_LIST[randomNo]);
+        audioRef.play();
     }
 }
