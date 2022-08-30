@@ -19,7 +19,7 @@ let MENS_STEPS_IMG_LIST = [
 
 var lightgrey = 'rgb(211, 211, 211)';
 var audioRef = null;
-var timeoutRef = null;
+var timeoutRef = null, practiceTimerRef = null, downloadTimerRef = null; 
 
 /* Click start button to start training*/
 document.getElementById("startmen").onclick = startMenClicked;
@@ -36,10 +36,10 @@ function startDance() {
     let countdown = 3;
     /*after countdown, music starts playing and steps start dancing*/
     playMusic();
-    let downloadTimer = setInterval(function () {
+    downloadTimerRef = setInterval(function () {
         if (countdown <= 0) {
             document.getElementById("counter-div-men").innerHTML = "";
-            clearInterval(downloadTimer);
+            clearInterval(downloadTimerRef);
             changeStepImage(0);
         } else {
             /*display counter*/
@@ -77,14 +77,35 @@ function getRandomInt(max) {
 
 /*automatic music play when start button is pushed*/
 function playMusic() {
+    enableMusicControls(); 
     const randomNo = getRandomInt(AUDIO_FILES_LIST.length - 1);
     audioRef = new Audio(AUDIO_FILES_LIST[randomNo]);
     audioRef.play();
 }
 
+
+
+	
+/* enable and disable mute and shuffle button*/
+
+function enableMusicControls() {
+    document.getElementById('muteunmute').disabled = false;
+    document.getElementById("shuffle").disabled = false;
+}
+
+function disableMusicControls() {
+    document.getElementById('muteunmute').disabled = true;
+    document.getElementById("shuffle").disabled = true;
+} 
+
 /*interval set for practice timer*/
 function setPracticeTimes() {
-    setInterval(practiceTime, 1000);
+    practiceTimerRef = setInterval(practiceTime, 1000);
+}
+
+/*stop practice time*/
+function stopPracticeTime() {
+    clearInterval(practiceTimerRef);
 }
 
 /*practice timer counting the time passed since start button was pushed*/
@@ -107,7 +128,7 @@ function clicked(button_id) {
     }
 }
 
-/*change background color of button to grey/red  */
+/*change background color of music button to grey/red */
 function changetoGrey(button_id) {
     let color0 = document.getElementById(button_id);
     color0.style.backgroundColor = "lightgrey";
@@ -122,24 +143,34 @@ function changetoRed(button_id) {
 document.getElementById('pause').onclick = onPause;
 
 function onPause() {
+    if(audioRef) {
+    clearInterval(downloadTimerRef);
+    disableMusicControls();
     audioRef.pause();
     stopSteps();
+    stopPracticeTime();
+    }
 }
+
 
 /*mute button*/
 document.getElementById('muteunmute').onclick = unMute;
 
 function unMute() {
+    if(audioRef) { 
     clicked('muteunmute');
     audioRef.muted = !audioRef.muted;
+    }
 }
 
 /* shuffle music when button is clicked*/
 document.getElementById("shuffle").onclick = shuffleMusic;
 
 function shuffleMusic() {
+    if(audioRef) {
     const randomNo = getRandomInt(AUDIO_FILES_LIST.length - 1);
     audioRef.pause();
     audioRef = new Audio(AUDIO_FILES_LIST[randomNo]);
     audioRef.play();
+    }
 }

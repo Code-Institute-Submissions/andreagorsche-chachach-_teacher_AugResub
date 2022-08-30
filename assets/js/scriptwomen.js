@@ -83,6 +83,7 @@ function playMusic() {
     audioRef.play();
 }
 
+/* enable and disable mute and shuffle button*/
 
 function enableMusicControls() {
     document.getElementById('muteunmute').disabled = false;
