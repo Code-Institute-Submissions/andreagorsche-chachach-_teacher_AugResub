@@ -28,6 +28,11 @@ On top of each page there is a navigation bar allowing the user to get back to t
 
 ![Navigation Bar](assets/images/readme/interface/navigationbar.png)
 
+## Footer
+Following the feedback of the first submission I added a footer with social media icons to the main page and the subpages. Since ChaChaCha Teacher does not exist and therefore there are no social media channels, the icons lead to the general social media pages.
+
+![Footer](assets/images/readme/interface/footer.png)
+
 # Features Main Page
 
 ## Intro Box
@@ -50,6 +55,11 @@ The title of the subpage consists of the name of the game (ChaChaChaTeacher) and
 The dancefloor is split into 3 parts. 
 
 ![Complete Dancefloor](assets/images/readme/interface/complete_dancefloor.png)
+
+## Testing Steps
+The ChaChaCha Teacher provides testing steps for male and female users. The steps are a sequence of 8 steps. The male and female steps complement each other. So the male start with the left foot while the women start with the right foot. This logic is followed through out the sequences.
+
+![Testing Steps Men ](assets/images/dancingmen/stepsmen1.png) ![Testing Steps Women ](assets/images/dancingwomen/stepswomen1.jpg)
 
 ### Music Panel
 
@@ -99,9 +109,9 @@ There are a few features that could be implemented in the future:
 
 # Testing
 
-Throughout the coding process I did test and debug the code over and over, trying different features and ways to get them going best. This is also visible in the commit protocol.
+Throughout the coding process I did test and debug the code over and over, trying different features and ways to get them going best. This is also visible in the commit protocol. 
 
-## Central Debugging Cases
+## Central Debugging Cases - Stage 1 (submission 1)
 
 ### Timeout 
 When starting the project I had a clear vision of looping through an array of pictures in my head. Little did I know how complex this would get.
@@ -129,47 +139,118 @@ The idea behind coloring the button on click was to give the button a status (re
 ### Shuffle Music
 The shuffle button was the only code that really turned out exactly as I thought of it before. I knew I would need Math.floor and Math.random and that is exactly how it turned out. When addressing the array I made a mistake my mentor found and explained to me: Never address the array, address the variable representing each single element of the array.
 
+## Central Debugging Cases - Stage 2 (submission 2)
+For the second submission of the project 2 I worked on the following issues:
+
+### Issue 1: The pause button on the non-leading steps page is not functional.
+The bug was based on two issues:
+a) there was a typo in the array for the women steps.
+b) the variable TimeOutRef was defined twice - as a global and local variable. 
+The problems were solved by fixing the typo and deleting the local variable definition.
+
+### Issue 2: Console errors upon hitting the volume button and shuffle button on leading and non-leading steps pages. 
+The buttons were not covering every user interaction yet. I was not considering that any user would click the shuffle or mute button before the music even started. This caused issues in the console. 
+This problem was fixed with the help of my mentor. In the javascript files we added an if loop in the functions onPause, shufflemusic and unmute. In the html files we added 'disabled=true' to the buttons shuffle music and mute/unmute. Thus, the buttons were disabled by default. To enable and disable the buttons depending on their current status we created two more functions in the Javascript file enableMusicControls and disableMusicControls.
+
+### Issue 3 (mentor motivated): The practice time did not stop when the pause button was pushed    
+We cleared the interval for the variable downloadTimeRef in the function onPause and integrated the practice time in the pause function in that way.
+
+### Issue 4 (self motivated): When pushed multiple times the start button triggered playing multiple music at one
+An issue even more apparent once Issue 2 and 3 were solved: the start button pushed multiple times played multiple music pieces at once. I myself searched for a fitting solution to the problem. Following the example of the mute and shuffle button, I disabled the start button after its first click and only clicking the pause button can enable the start button again. 
+
+### Issue 5: There are console errors thrown as well while interacting with the application that need to be fixed.
+After fixing issues 1 to 4, there were no console errors visible (except for the missing favicons). So I pointed the feedback out to my mentor. He checked and also didn't find any further issues. So this issue should be fixed as well.
+
+### Issue 6 (assessor comment): The readme should include the feature testing steps. 
+This was a feedback of the assessor. I hope I understood the requirement right, since it wasn't elaborated further but seemingly mentioned in passing. The feature testing steps was added to the feature section of this read me file.
+
+### Issue 7 (assessor comment): The favicon and social media links should also be added. 
+The favicons for the main page and the two subpages (leading steps and non-leading steps) were added.
+Social media icons for instagram, facebook and twitter were added. Since the ChaChaCha Teacher doesn't really exist and therefore doesn't have any social media channels, the links of the icons go to the main social media pages.
+
 ## Validators
 
-### HTML
+The Validators were used for both the stage 1 (1st submission) and the stage 2 (2nd submission.)
+
+### HTML - Stage 1
 The main page and the subpages were tested with the WRC validator for HTML and no errors occured.
 
 ### Main Page
 
-![HTML Validator Main](assets/images/readme/validators/html_mainpage_validator.png)
+![HTML Validator Main](assets/images/readme/validators/stage_1/html_mainpage_validator.png)
 
 ### Leading Steps
 
-![HTML Validator Leading](assets/images/readme/validators/html_leadingsteps_validator.png)
+![HTML Validator Leading](assets/images/readme/validators/stage_1/html_leadingsteps_validator.png)
 
 ### Non-Leading Steps
-![HTML Validator Non-Leading](assets/images/readme/validators/html_non_leadingsteps_validator.png)
+![HTML Validator Non-Leading](assets/images/readme/validators/stage_1/html_non_leadingsteps_validator.png)
 
-### CSS
+### CSS - Stage 1
 The main page and the subpages were tested with the (jigsaw) validator for CSS and no errors occured.
 
 ### Main Page
 
-![CSS Validator Main](assets/images/readme/validators/css_mainpage_validator.png)
+![CSS Validator Main](assets/images/readme/validators/stage_1/css_mainpage_validator.png)
 
 ### Leading Steps
 
-![CSS Validator Leading](assets/images/readme/validators/css_leadingsteps_validator.png)
+![CSS Validator Leading](assets/images/readme/validators/stage_1/css_leadingsteps_validator.png)
 
 ### Non-Leading Steps
 
-![CSS Validator Non-Leading](assets/images/readme/validators/css_nonleadingsteps_validator.png)
+![CSS Validator Non-Leading](assets/images/readme/validators/stage_1/css_nonleadingsteps_validator.png)
 
-### Javascript
+### Javascript - Stage 1
 The two javascript files were tested with the Jshint validator. No errors were found. 
 
 ### JS Men
 
-![JS Validator Men](assets/images/readme/validators/javascript_men_validator.png)
+![JS Validator Men](assets/images/readme/validators/stage_1/javascript_men_validator.png)
 
 ### JS Women
 
-![JS Validator Women](assets/images/readme/validators/javascript_women_validator.png)
+![JS Validator Women](assets/images/readme/validators/stage_1/javascript_women_validator.png)
+
+### HTML - Stage 2 (2nd submission)
+The main page and the subpages were tested with the WRC validator for HTML and no errors occured.
+
+### Main Page
+
+![HTML Validator Main](assets/images/readme/validators/stage_1/html_mainpage_validator.png)
+
+### Leading Steps
+
+![HTML Validator Leading](assets/images/readme/validators/stage_1/html_leadingsteps_validator.png)
+
+### Non-Leading Steps
+![HTML Validator Non-Leading](assets/images/readme/validators/stage_1/html_non_leadingsteps_validator.png)
+
+### CSS - Stage 2 (2nd submission)
+The main page and the subpages were tested with the (jigsaw) validator for CSS and no errors occured.
+
+### Main Page
+
+![CSS Validator Main](assets/images/readme/validators/stage_2/css_mainpage_validator.png)
+
+### Leading Steps
+
+![CSS Validator Leading](assets/images/readme/validators/stage_2/css_leadingsteps_validator.png)
+
+### Non-Leading Steps
+
+![CSS Validator Non-Leading](assets/images/readme/validators/stage_2/css_nonleadingsteps_validator.png)
+
+### Javascript - Stage 2 (2nd submission)
+The two javascript files were tested with the Jshint validator. No errors were found. 
+
+### JS Men
+
+![JS Validator Men](assets/images/readme/validators/stage_2/javascript_men_validator.png)
+
+### JS Women
+
+![JS Validator Women](assets/images/readme/validators/stage_2/javascript_women_validator.png)
 
 
 # Main Learnings

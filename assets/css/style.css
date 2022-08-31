@@ -1,6 +1,13 @@
 /*add Google fonts*/
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,700;1,400&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap");
 
+/*body*/
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
 /*add background image*/
 #start-background {
     height: 100%;
@@ -69,7 +76,35 @@ button {
     margin-left: 13%;
 }
 
-/* On screens that are 400px or less, set the background color to olive */
+/* Footer */
+footer{
+    width: 100%;
+    height: 3%;
+    padding: 1%;
+    background-color: #0B2843;
+    opacity: 0.8;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;    
+}
+
+footer li {
+    float: right;
+    list-style-type: none;
+    margin-right: 20px;
+    margin-top: 15px;
+    padding-right: 20px;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+/* On screens that are 400px or less, set the font size to 9px */
 @media screen and (max-width: 400px) {
     /*styling heading and paragraphs*/
 
