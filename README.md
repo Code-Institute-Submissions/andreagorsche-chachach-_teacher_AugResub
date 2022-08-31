@@ -244,10 +244,10 @@ The warnings above were evaluated and disregarded due to its irrelevance. The fi
 
 ### Subpages Steps
 
-![CSS Validator Subpages](assets/images/readme/validators/stage_2/chachacha_css_sub.png)
+![CSS Validator Subpages](assets/images/readme/validators/stage_2/chachacha_css__sub.png)
 
 Warnings
-![CSS Validator Main](assets/images/readme/validators/stage_2/chachacha_css_sub_warnings.png)
+![CSS Validator Main](assets/images/readme/validators/stage_2/chachacha_css_sub_warning.png)
 
 The warning above was evaluated and disregarded due to its irrelevance. The  warning says that with direct entry of CSS the imported style sheets are not tested. This doesn't because I test each imported file separately.
 
@@ -289,6 +289,10 @@ Pretty early on in the project I realized that pressing the start button will ha
 
 Although I think it was mentioned in the class that one function can call on other functions, I realized how crucial this is when starting to code my start button features. I also realized in that context how important a clear structure and naming of functions is.
 
+## Considering all options a user may have (stage 2)
+The buttons start, pause, mute and shuffle could also be used in a way not intended by me. These options need to be considered and solved (e.g. through disabling buttons when they shouldn't be used.)
+
+
 # Deployment
 The project ChaChaCha Teacher was deployed using GitHub pages. Therefore, I went to the GitHub website and:
 - picked the repository 
@@ -308,6 +312,7 @@ The concept and writing of the code was done by me. My mentor helped me signific
 - introducting me to parseInt without which the practice time display wouldn't have happend
 - connecting my clicked function to the mute button and making the muting work properly without an if else statement
 - helping me with logic mistakes in the code
+- helping me out in a second session to fix interaction problems with the buttons in use
 
 I am aware that the variables are supposed to stay local in this project. All the variables that were set global were discussed with my mentor and he recommended doing so. He didn't see a problem because they all function as constants.
 
