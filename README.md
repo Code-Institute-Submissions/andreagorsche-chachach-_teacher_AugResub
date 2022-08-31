@@ -213,44 +213,55 @@ The two javascript files were tested with the Jshint validator. No errors were f
 ![JS Validator Women](assets/images/readme/validators/stage_1/javascript_women_validator.png)
 
 ### HTML - Stage 2 (2nd submission)
-The main page and the subpages were tested with the WRC validator for HTML and no errors occured.
+The main page and the subpages were tested with the WRC validator for HTML.
 
 ### Main Page
+For the main page no errors were detected with WRC validator.
 
-![HTML Validator Main](assets/images/readme/validators/stage_1/html_mainpage_validator.png)
+![HTML Validator Main](assets/images/readme/validators/stage_2/chachacha_main_html.png)
 
 ### Leading Steps
+For the subpages the WRC validator says that the attribute disabled has a bad value with 'true'. This appears as an error. Since my mentor himself suggested this approach I will leave it like this. I don't see why this should not be ok. 
 
-![HTML Validator Leading](assets/images/readme/validators/stage_1/html_leadingsteps_validator.png)
+![HTML Validator Leading](assets/images/readme/validators/stage_2/chachacha_leading_html.png)
 
 ### Non-Leading Steps
-![HTML Validator Non-Leading](assets/images/readme/validators/stage_1/html_non_leadingsteps_validator.png)
+For the subpages the WRC validator says that the attribute disabled has a bad value with 'true'. This appears as an error. Since my mentor himself suggested this approach I will leave it like this. I don't see why this should not be ok. 
+
+![HTML Validator Non-Leading](assets/images/readme/validators/stage_2/chachacha_nonleading_html.png)
 
 ### CSS - Stage 2 (2nd submission)
 The main page and the subpages were tested with the (jigsaw) validator for CSS and no errors occured.
 
 ### Main Page
 
-![CSS Validator Main](assets/images/readme/validators/stage_2/css_mainpage_validator.png)
+![CSS Validator Main](assets/images/readme/validators/stage_2/chachacha_css.png)
 
-### Leading Steps
+Warnings
+![CSS Validator Main](assets/images/readme/validators/stage_2/chachacha_css_warnings.png)
 
-![CSS Validator Leading](assets/images/readme/validators/stage_2/css_leadingsteps_validator.png)
+The warnings above were evaluated and disregarded due to its irrelevance. The first warning says that with direct entry of CSS the imported style sheets are not tested. This doesn't because I test each imported file separately. The second warning says that font names should always have double quotation marks. I checked it and my CSS is clean, this might be a bug of the validator. The third warning says that the -ms-transform is not known by this validator. No reasons to delete it, since the css command doesn't cause any problems and is needed for the code.
 
-### Non-Leading Steps
+### Subpages Steps
 
-![CSS Validator Non-Leading](assets/images/readme/validators/stage_2/css_nonleadingsteps_validator.png)
+![CSS Validator Subpages](assets/images/readme/validators/stage_2/chachacha_css_sub.png)
+
+Warnings
+![CSS Validator Main](assets/images/readme/validators/stage_2/chachacha_css_sub_warnings.png)
+
+The warning above was evaluated and disregarded due to its irrelevance. The  warning says that with direct entry of CSS the imported style sheets are not tested. This doesn't because I test each imported file separately.
+
 
 ### Javascript - Stage 2 (2nd submission)
 The two javascript files were tested with the Jshint validator. No errors were found. 
 
 ### JS Men
 
-![JS Validator Men](assets/images/readme/validators/stage_2/javascript_men_validator.png)
+![JS Validator Men](assets/images/readme/validators/stage_2/chachacha_jsmen.png)
 
 ### JS Women
 
-![JS Validator Women](assets/images/readme/validators/stage_2/javascript_women_validator.png)
+![JS Validator Women](assets/images/readme/validators/stage_2/chachacha_jswomen.png)
 
 
 # Main Learnings
