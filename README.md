@@ -168,6 +168,9 @@ This was a feedback of the assessor. I hope I understood the requirement right, 
 The favicons for the main page and the two subpages (leading steps and non-leading steps) were added.
 Social media icons for instagram, facebook and twitter were added. Since the ChaChaCha Teacher doesn't really exist and therefore doesn't have any social media channels, the links of the icons go to the main social media pages.
 
+### Issue 8 (assessor comment): The large file changes should be broken down into small and manageable commits with tailored commit messages. 
+This is the only issue I could not fix anymore. But I considered the feedback for the newest commits and will continue to do so.
+
 ## Validators
 
 The Validators were used for both the stage 1 (1st submission) and the stage 2 (2nd submission.)
